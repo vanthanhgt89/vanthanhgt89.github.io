@@ -35,15 +35,21 @@ export default {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    height: 500px;
+    height: 155px;
     z-index: 2;
   }
   
-   @media (min-width: 425px) {
+   @media (min-width: 1px) {
     .banner {
       background-size: contain;
       height: 155px;
+    }
+  }
 
+  @media (min-width: 425px) {
+    .banner {
+      background-size: contain;
+      height: 155px;
     }
   }
 
@@ -76,9 +82,9 @@ export default {
     margin: 15px auto;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #go-down {
-      bottom: -32px;
+      bottom: -10px;
     }
   }
 
@@ -99,7 +105,7 @@ export default {
     overflow: hidden;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #go-about {
       width: 16px;
       height: 26px;
@@ -160,7 +166,7 @@ export default {
     margin-left: 5%;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     .shop-button {
       width: 80%;
       height: 29px;
@@ -209,7 +215,7 @@ export default {
     z-index: -1;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #introduce {
       font-size: 0.8em;
     }

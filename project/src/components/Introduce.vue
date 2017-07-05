@@ -170,6 +170,13 @@
   <script>
     export default {
       name: 'Introduce',
+      mounted () {
+        window.$('[data-slide="introduce"]').click(function () {
+          window.$('.nav-introduce').animate({
+            width: 'toggle'
+          }, 350)
+        })
+      },
       data () {
         return {
           list1: ['Lịch sử thành lập', 'Văn hóa công ty', 'Thông tin tuyển dụng', 'Liên hệ với chúng tôi', 'Thông tin khuyến mãi'],
@@ -192,26 +199,32 @@
 
   }
 
+   @media (min-width: 1px) {
+    .banner {
+      background-size: contain;
+      height: 155px;
+    }
+  }
+
   @media (min-width: 425px) {
     .banner {
       background-size: contain;
-      height: 150px;
-
+      height: 155px;
     }
   }
 
   @media (min-width: 768px) {
     .banner {
-      background-size: cover;
-      height: 175px;
+      background-size: contain;
+      height: 280px;
 
     }
   }
 
   @media (min-width: 992px) {
     .banner {
-      background-size: cover;
-      height: 200px;
+      background-size: contain;
+      height: 375px;
 
     }
   }
@@ -219,11 +232,9 @@
   @media (min-width: 1200px) {
     .banner {
       background-size: cover;
-      height: 300px;
+      height: 500px;
     }
   }
-
-
   #go-down {
     position: absolute;
     bottom: -22px;
@@ -231,9 +242,9 @@
     margin: 15px auto;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #go-down {
-      bottom: -32px;
+      bottom: -10px;
     }
   }
 
@@ -254,7 +265,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #go-about {
       width: 16px;
       height: 26px;
@@ -301,7 +312,7 @@
     margin: auto;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 1px) {
     #information {
       font-size: 0.8em;
     }
@@ -378,23 +389,12 @@
 
   .title-left{
     background: #F08113;
-    width: 20%;
     float: left;
     color: white;
-    padding: 0 10px;
+    padding: 0 15px;
     font-size: 1em;
   }
-  @media (min-width: 425px){
-    .title-left{
-      width: 50%;
-      font-size:0.8em;
-    }
-  }
-  @media (min-width: 768px){
-    .title-left{
-      width: 30%;
-    }
-  }
+ 
 
   .img-box{
     width: 80%;
@@ -444,7 +444,7 @@
   width: 100%;
   height: 400px;
 }
-@media (min-width: 425px){
+@media (min-width: 1px){
   .img-box-3{
    width: 60%;
  }

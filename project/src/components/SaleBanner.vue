@@ -70,7 +70,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- @media (min-width: 425px) {
+ @media (min-width: 1px) {
     .post > img {
       display: none;
     }

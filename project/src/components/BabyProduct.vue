@@ -102,32 +102,29 @@
 
 .title-left{
   background: #F08113;
-  width: 25%;
   float: left;
   color: white;
   padding: 0 10px
-}
-
-@media (min-width: 425px){
-  .title-left{
-    width: 40%;
-  }
-}
-@media (min-width: 768px){
-  .title-left{
-    width: 25%;
-  }
 }
 
 
 .title-right{
   float: right;
   padding: 0 15px;  
-}
-
-.title-right{
   color: black;
 }
+
+@media (min-width: 1px){
+  .title-right{
+  padding: 0;  
+  }
+}
+@media (min-width: 425px){
+  .title-right{
+  padding: 0 15px;  
+  }
+}
+
 .container-item-s{
   position: relative;
   border: 1px solid rgba(85, 85, 85, 0.18);

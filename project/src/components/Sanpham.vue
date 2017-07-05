@@ -167,6 +167,13 @@
   import Slider3 from '../components/Slider3'
   export default {
     name: 'Sanpham',
+    mounted () {
+      window.$('[data-slide="catalogues"]').click(function () {
+        window.$('.list-catalogues').animate({
+          width: 'toggle'
+        }, 350)
+      })
+    },
     data () {
       return {
         prices: [{price: 'Theo giá sản phẩm'}, {price: 'Từ cao đến thấp'}, {price: 'Từ thấp đến cao'}, {price: 'Dưới 200.000 VND'}, {price: 'Dưới 500.000 VND'}, {price: 'Dưới 1 triệu'}, {price: 'Dưới 2 triệu'}, {price: 'Trên 2 triệu'}],

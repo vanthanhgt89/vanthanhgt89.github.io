@@ -138,8 +138,26 @@ export default {
     font-size: 2.5em;
   }
 
+
+   @media (min-width: 375px){
+    input{
+      width: 60%;
+      left: -32px;
+      font-size: 0.8em;
+    }
+    button{
+      left: 66%;
+      font-size: 0.8em;
+    }
+
+    .icon{
+      left: 21%;
+    }
+  }
+
   @media (min-width: 425px){
     input{
+      width: 30%;
       left: -40px;
       font-size: 0.8em;
     }

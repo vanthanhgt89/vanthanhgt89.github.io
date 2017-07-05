@@ -19,7 +19,7 @@
       <div class="tab-content tab1">
 
         <div id="item1" class="tab-pane fade in active">
-          <div class="slider1">
+          <div id="slider1">
             <div class="slide" v-for="item in specialImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
@@ -41,7 +41,7 @@
         </div> <!-- end item1 -->
 
 
-         <div id="item2" class="tab-pane fade in active">
+         <div id="item2" class="tab-pane fade">
           <div class="slider1">
             <div class="slide" v-for="item in sosinhImg">
                <div class="container-item">
@@ -64,7 +64,7 @@
         </div> <!-- end item2 -->
 
 
-         <div id="item3" class="tab-pane fade in active">
+         <div id="item3" class="tab-pane fade">
           <div class="slider1">
             <div class="slide" v-for="item in boyImg">
                <div class="container-item">
@@ -86,7 +86,7 @@
           </div>
         </div> <!-- end item3 -->
 
-         <div id="item4" class="tab-pane fade in active">
+         <div id="item4" class="tab-pane fade">
           <div class="slider1">
             <div class="slide" v-for="item in girlImg">
                <div class="container-item">
@@ -108,7 +108,7 @@
           </div>
         </div> <!-- end item4 -->
 
-         <div id="item5" class="tab-pane fade in active">
+         <div id="item5" class="tab-pane fade">
           <div class="slider1">
             <div class="slide" v-for="item in toyImg">
                <div class="container-item">
@@ -141,6 +141,12 @@
   export default {
     name: 'specialProduct',
     mounted () {
+      window.$('#slider1').bxSlider({
+        slideWidth: 200,
+        minSlides: 1,
+        maxSlides: 5,
+        slideMargin: 40
+      })
       window.$('.slider1').bxSlider({
         slideWidth: 200,
         minSlides: 3,
@@ -269,11 +275,17 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 1px) {
   #special-product .nav {
     margin: 25px auto;
     display: none;
   }
+  .title-text {
+    font-size: 0.6em;
+  }
+}
+
+@media (min-width: 425px) {
   .title-text {
     font-size: 1em;
   }

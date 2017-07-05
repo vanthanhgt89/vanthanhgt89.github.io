@@ -52,7 +52,16 @@
     height: 500px;
     
   }
+    
 
+  @media (min-width: 1px) {
+    .banner {
+      background-size: contain;
+      height: 155px;
+
+    }
+  }
+  
   @media (min-width: 425px) {
     .banner {
       background-size: contain;

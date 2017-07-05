@@ -61,38 +61,35 @@
 <style scoped>
  
   
-  .row .box-title{
-    height: 50px;
-    line-height: 50px;
-    margin: 30px 0;
-    border-bottom: 2px solid orange;
-    text-transform: capitalize;
-  }
+ .row .box-title{
+  height: 50px;
+  line-height: 50px;
+  margin: 30px 0;
+  border-bottom: 2px solid orange;
+  text-transform: capitalize;
+}
 
-  .title-left{
-    background: #F08113;
-    float: left;
-    color: white;
-    padding: 0 10px;
-    width:25%;
-  }
+.title-left{
+  background: #F08113;
+  float: left;
+  color: white;
+  padding: 0 10px
+}
 
+
+.title-right{
+  float: right;
+  padding: 0 15px;  
+  color: black;
+}
+@media (min-width: 1px){
   .title-right{
-    float: right;
-    padding: 0 15px;
-  }
-
-  .title-right >a{
-    color: black;
-  }
-  @media (min-width: 425px){
-  .title-left{
-    width: 40%;
+  padding: 0;  
   }
 }
-@media (min-width: 768px){
-  .title-left{
-    width: 25%;
+@media (min-width: 425px){
+  .title-right{
+  padding: 0 15px;  
   }
 }
 

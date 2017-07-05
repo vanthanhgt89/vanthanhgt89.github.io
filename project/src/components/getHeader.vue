@@ -6,9 +6,13 @@
         <span><i class="fa fa-envelope-o"></i>  vanthanhgt89@gmail.com</span>
       </div>
 
-      <div class="col-xs-7 col-sm-6 col-md-6 menu__info--item2" >
-        <button  class="btn-login" data-toggle="modal" data-target="#myModal" v-text="html2"></button>
-        <button class="btn-login" data-toggle="modal" data-target="#myModal" v-text="html1"></button>
+      <div class="col-xs-7 col-sm-6 col-md-6 menu__info--item2">
+        <div class="register" v-html="html2">
+        <!-- <button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button> -->
+        </div>
+        <div class="sign-in" v-html="html1">
+         <!--  <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</button> -->
+        </div>
       </div>
     </div>
     <div id="myModal" class="modal fade" role="dialog">
@@ -39,7 +43,7 @@
                       nhớ tài khoản</label>
                   </div>
                   <router-link to="/">
-                  <button  class="btn btn-primary getsubmit" data-dismiss="modal" @click="changeText">Đăng nhập
+                  <button  class="btn btn-primary getsubmit" data-dismiss="modal" @click="changeHtml">Đăng nhập
                   </button>
                   </router-link>
                   <div class="remember">
@@ -240,6 +244,16 @@
       </div>
     </nav>
     <!--end nav mobile-->
+   <!--  <div class="logged">
+      <img src="../assets/avarta.png" alt="" class="img-responsive circle">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Bùi Văn Thanh</button>
+        <ul class="dropdown-menu">
+          <li>Quản lý tài khoản</li>
+          <li>Đăng xuất</li>
+        </ul>
+      </div>
+    </div> -->
 
 
   </header>
@@ -255,20 +269,32 @@
       window.$('[data-toggle="collapse"]').click(function () {
         window.$('#menu-phone').slideDown()
       })
+
+      window.$('.btn-login').css({
+        'background': 'none',
+        'border': 0
+      })
+      window.$('.logged').css({
+        'margin-right': '50px'
+      })
+      window.$('.dropdown-menu').css({
+        'color': 'black!important'
+      })
     },
     data () {
       return {
         list1: ['Dành cho bé sơ sinh', 'Bỉm và tã giấy', 'Sữa', 'Kem hăm dưỡng da và phấn rôm', 'Quần áo sơ sinh', 'Giường và cũi gỗ', 'Lôi diện cho bé'],
-        html1: 'Đăng nhập',
-        html2: 'Đăng ký',
+        html1: ' <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</button>',
+        html2: '<button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button>',
+        avarta: require('../assets/avarta.png'),
         couter1: 0,
         couter2: 0
       }
     },
     methods: {
-      changeText: function () {
-        this.html1 = 'vanthanhgt89'
-        this.html2 = 'Đăng xuất'
+      changeHtml: function () {
+        this.html1 = '<div class="logged"> <img v-bind:src="this.avarta" alt="" class="img-responsive circle"> <div class="dropdown"> <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Bùi Văn Thanh</button> <ul class="dropdown-menu"> <li class="dropdown-text">Quản lý tài khoản</li> <li class="dropdown-text">Đăng xuất</li> </ul> </div> </div>'
+        this.html2 = ''
       },
       couter: function () {
         this.couter1++
@@ -280,7 +306,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
   .menu__info {
     width: 100%;
     height: 30px;
@@ -315,19 +340,14 @@
     height: 30px;
     color: white;
   }
-
-  .btn-login {
-    border: none;
-    background: none;
-    line-height: 30px;
+  .sign-in, .register{
     float: right;
-    margin-right: 15px;
-
+    line-height: 30px;
+  }
+  .register{
+    margin-left:15px;
   }
 
-/*  .menu__info--item2 > button {
-    margin-right: 15px;
-  }*/
 
   /*=== form register ===*/
   .user-modal {

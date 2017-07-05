@@ -143,6 +143,13 @@
 <script>
   export default {
     name: 'hello',
+    mounted () {
+      window.$('[data-slide="myslide"]').click(function () {
+        window.$('.nav-left').animate({
+          width: 'toggle'
+        }, 350)
+      })
+    },
     data () {
       return {
         list1: ['Sức khỏe cho mẹ và bé', 'Dinh dưỡng cho bé', 'Phát triển kỹ năng cho trẻ', 'Chăm sóc trẻ', 'Mẹo hay', 'Góc nhìn', 'Tâm sự'],
