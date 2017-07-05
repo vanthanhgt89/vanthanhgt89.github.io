@@ -1,0 +1,177 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=static/font-awesome-4.7.0/css/font-awesome.min.css><link rel=stylesheet href=static/dist/css/bootstrap.min.css><link rel=stylesheet href=static/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css><link rel=stylesheet href=static/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css><title>project</title><link href=/static/css/app.4522c4e518fc72c67405430f2494ea62.css rel=stylesheet></head><body><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=static/jquery/jquery.elevateZoom-3.0.8.min.js></script><script src=static/typed.js-master/js/typed.js></script><script src=static/OwlCarousel2-2.2.1/dist/owl.carousel.min.js></script><script src=static/dist/js/bootstrap.min.js></script><script>$(document).ready(function () {
+    
+
+      $("#zoom_03").elevateZoom({ zoomType  : "inner", cursor: "crosshair" });
+
+        $('.list-item').hover(function() {
+        $('.product').slideDown('slow');
+        $('#introduce').css('visibility','hidden');
+       }, function() {
+        $(window).click(function(){
+        $('.product').slideUp();
+        $('#introduce').css('visibility','visible');
+        })
+     });
+        
+      $('.container-item1').hover(function(){
+        $('.text-l').typed({
+          strings: ['Bố mẹ đang tìm quần áo cho bé ?'],
+          typeSpeed: 0
+        })
+        $('.typed-cursor').css('display','none');
+      }) 
+     
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        margin: 10,
+        nav: true,
+        lazyLoad:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 2
+          },
+          600: {
+            items: 3
+          },
+          992: {
+            items: 4
+          },
+          1170: {
+            items: 5
+          }
+        }
+      })
+
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        margin: 10,
+        nav: true,
+        lazyLoad:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 2
+          },
+          600: {
+            items: 3
+          },
+          992: {
+            items: 4
+          },
+          1170: {
+            items: 5
+          }
+        }
+      })
+     
+     $('.carousel').carousel({
+      interval: false
+     })
+
+      $('.owl-nav .owl-prev').css({
+        position: 'absolute',
+        top: '42%',
+        left: 0
+      })
+      $('.owl-nav .owl-prev').css('font-size', '1.5em');
+      $('.owl-nav .owl-prev').html('<i class="fa fa-angle-double-left" aria-hidden="true"></i>')
+      $('.owl-nav .owl-next').css({
+        position: 'absolute',
+        top: '42%',
+        right: 0
+      })
+      $('.owl-nav .owl-next').css('font-size', '1.5em');
+      $('.owl-nav .owl-next').html('<i class="fa fa-angle-double-right" aria-hidden="true"></i>')
+
+      function couterHeart(){
+        $('.couter-heart').each(function() {
+          $(this).click(function(){
+            var couter = $('.couter2').html();
+            couter ++;
+            $('.couter2').html(couter);
+            $(this).off();
+          })
+        });
+      }
+
+       function couterCart(){
+        $('.couter-cart').each(function() {
+          $(this).click(function(){
+            var couter = $('.couter2').html();
+            couter ++;
+            $('.couter1').html(couter);
+            $(this).off();
+          })
+        });
+      }
+      couterHeart();
+      // couterCart();
+      $('[data-slide="myslide"]').click(function() {
+        $('.nav-left').animate({
+          width: 'toggle'
+        },350)
+      });
+
+      $('[data-slide="introduce"]').click(function() {
+        $('.nav-introduce').animate({
+          width: 'toggle'
+        },350)
+      });
+
+       $('[data-slide="catalogues"]').click(function() {
+        $('.list-catalogues').animate({
+          width: 'toggle'
+        },350)
+      });
+
+
+      $(window).scroll(function () {
+        let wScroll =	$(this).scrollTop();
+        
+        if(wScroll > 0 && wScroll < 100){
+         $('#introduce').typed({
+          strings: ['Baby store xin chào quý khách </br> bố mẹ muốn mua gì cho con ?'],
+          typeSpeed: 0
+         })
+        $('#product').typed({
+          strings: ['Trang chủ / Sản phẩm</br>Sản phẩm của Babystore '],
+          typeSpeed: 0
+         })
+        $('#blog').typed({
+          strings: ['Trang chủ / Blog</br>'],
+          typeSpeed: 0
+         })
+         $('#information').typed({
+          strings: ['Trang chủ / Giới thiệu </br>Về Babystore '],
+          typeSpeed: 0
+         })
+        }
+
+
+        let html = $('#about').html();
+       if(html){
+
+           let lScroll = $('#about').offset().top;
+           if(wScroll > lScroll - $(window).height() / 2) {
+          $('.about-img-large').css('background-position', '40% ' + (wScroll - lScroll) + 'px')
+          let opacity = (wScroll - lScroll + 350) / (wScroll / 1.7);
+          $('.about-img-item').css(
+            {'opacity': opacity}
+            );
+        }
+       }
+       
+      })
+
+    })</script><script type=text/javascript src=/static/js/manifest.f7fdf73604fa869c817b.js></script><script type=text/javascript src=/static/js/vendor.76a52eb031dcd4a326f2.js></script><script type=text/javascript src=/static/js/app.55aa0da09d5c22a1ae36.js></script></body></html>
