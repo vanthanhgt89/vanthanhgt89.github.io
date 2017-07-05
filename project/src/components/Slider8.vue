@@ -13,11 +13,11 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <router-link to="DetailProduct"><img src="../assets/sp-slider/b-bo1/aothun1.jpg" alt="..."></router-link>
+      <router-link to="detail-product"><img src="../assets/sp-slider/b-bo1/aothun1.jpg" alt="..."></router-link>
      
     </div>
     <div class="item" v-for="item in data1">
-      <router-link to="DetailProduct"><img :src="item.src" alt="item.name"></router-link>
+      <router-link to="detail-product"><img :src="item.src" alt="item.name"></router-link>
      
     </div>
   </div>

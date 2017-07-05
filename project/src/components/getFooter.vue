@@ -24,17 +24,17 @@
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4><a href="">Giới thiệu</a></h4>
+         <h4><router-link to="introduce">Giới thiệu</router-link></h4>
         <ul>
-          <li><a href="">Về chúng tôi</a></li>
-          <li><a href="">Hệ thống cửa hàng</a></li>
-          <li><a href="">Khuyến mãi</a></li>
-          <li><a href="">Tuyển dụng</a></li>
-          <li><a href="">Cam kết sản phẩm chính hãng</a></li>
+          <li><router-link to="introduce">Về chúng tôi</router-link></li>
+          <li><router-link to="introduce">Hệ thống cửa hàng</router-link></li>
+          <li><router-link to="sale-off">Khuyến mãi</router-link></li>
+          <li><router-link to="">Tuyển dụng</router-link></li>
+          <li><router-link to="">Cam kết sản phẩm chính hãng</router-link></li>
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4><a href="">Hướng dẫn hỗ trợ</a></h4>
+         <h4><router-link to="">Hướng dẫn hỗ trợ</router-link></h4>
         <ul>
           <li>Hướng dẫn mua hàng</li>
           <li>Vận chuyển - giao hàng</li>

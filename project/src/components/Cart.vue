@@ -26,7 +26,7 @@
             <td class="box-s"><button class="delete" @click="clean(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
           </tr>
           <tr class="total">
-            <td colspan="3">
+            <td colspan="3" class="sub-table">
              <div class="row info">
               <div class="col-xs-* col-sm-6 col-md-6">
                 <span><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 19008080</span>
@@ -64,12 +64,13 @@
                
             </table>  
              <div class="submit-form">
-                   <router-link to="Payment">
+                   <router-link to="payment">
                     <button class="btn btn-primary next">Thanh toán <i class="fa fa-angle-right" aria-hidden="true"></i></button>
                   </router-link>
                 </div>
           </td>
         </tr>
+
 
       </tbody>
     </table>
@@ -206,7 +207,7 @@
   }
 
   .sub-table{
-    border: 1px solid 1px solid rgba(40, 96, 144, 0.48);
+    border: 1px solid rgba(0, 0, 0, 0.23);
     padding: 30px;
   }
   .sum{
@@ -224,7 +225,7 @@
     width: 100%;
   }
   .title-table >h3{
-    color: rgba(7, 117, 171, 0.9);
+    color: orange;
     text-align: left;
     text-transform: uppercase;
   }
@@ -265,8 +266,8 @@
 
 .info{
   padding: 10px 0;
-  border:1px solid rgba(0, 0, 0, 0.23);
-  border-radius:4px;
+  /*border:1px solid rgba(0, 0, 0, 0.23);*/
+  /*border-radius:4px;*/
 }
 
 .info > div >span{

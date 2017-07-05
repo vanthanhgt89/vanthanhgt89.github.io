@@ -11,7 +11,7 @@
       </p>
 
       <div class="row text-center">
-        <router-link to="Sanpham">
+        <router-link to="product">
           <button class="btn btn-primary btn-detail">Xem chi tiết</button>
         </router-link>
       </div>
@@ -21,7 +21,7 @@
         <div class="about-img-item">
           <div class="about-shop">
 
-        <router-link to="Sanpham">
+        <router-link to="product">
             Mua ngay
         </router-link>
 

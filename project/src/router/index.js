@@ -16,7 +16,7 @@ import Payment from '@/components/Payment'
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -24,57 +24,57 @@ export default new Router({
       component: Home
     },
     {
-      path: '/Sanpham',
+      path: '/product',
       name: 'Sanpham',
       component: Sanpham
     },
     {
-      path: '/DetailProduct',
+      path: '/detail-product',
       name: 'DetailProduct',
       component: DetailProduct
     },
     {
-      path: '/Contact',
+      path: '/contact',
       name: 'Contact',
       component: Contact
     },
     {
-      path: '/Introduce',
+      path: '/introduce',
       name: 'Introduce',
       component: Introduce
     },
     {
-      path: '/Blog',
+      path: '/blog',
       name: 'Blog',
       component: Blog
     },
     {
-      path: '/Saleoff',
+      path: '/sale-off',
       name: 'Saleoff',
       component: Saleoff
     },
     {
-      path: '/Favorite',
+      path: '/favorite',
       name: 'Favorite',
       component: Favorite
     },
     {
-      path: '/Cart',
+      path: '/cart',
       name: 'Cart',
       component: Cart
     },
     {
-      path: '/Payment',
+      path: '/payment',
       name: 'Payment',
       component: Payment
     },
     {
-      path: '/ATMBank',
+      path: '/atm-bank',
       name: 'ATMBank',
       component: ATMBank
     },
     {
-      path: '/VisaCard',
+      path: '/visa-card',
       name: 'VisaCard',
       component: VisaCard
     }

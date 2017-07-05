@@ -6,7 +6,7 @@
           <span >Thời trang bé trai</span>
         </div>
         <div class="title-right">
-          <router-link to="Sanpham"> Toàn bộ sản phẩm <i class="fa fa-angle-right" aria-hidden="true"></i></router-link> 
+          <router-link to="product"> Toàn bộ sản phẩm <i class="fa fa-angle-right" aria-hidden="true"></i></router-link> 
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
             <div class="title">
               <h3> <a href="">Thời trang bé trai</a> </h3>
               <div class="show">
-              <router-link to="Sanpham"><button class="btn btn-primary">Xem toàn bộ sản phẩm</button></router-link>
+              <router-link to="product"><button class="btn btn-primary"> Xem toàn bộ sản phẩm</button></router-link>
             </div>
             </div>
             
@@ -31,18 +31,18 @@
           <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-4" v-for="item in data1">
               <div class="container-item-s" >
-                <router-link to="DetailProduct"><img :src="item.src" class="img-responsive" alt="item.name"></router-link> 
+                <router-link to="detail-product"><img :src="item.src" class="img-responsive" alt="item.name"></router-link> 
                   <div class="title-name">
-                  <router-link to="DetailProduct"> {{item.name}}</router-link> 
+                  <router-link to="detail-product"> {{item.name}}</router-link> 
                 </div>
                 <div class="price-item">
-                   <router-link to="DetailProduct"><ins>{{item.price}}</ins></router-link>
-            <router-link to="DetailProduct"><del>{{item.priceDel}}</del></router-link> 
+                   <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
+            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link> 
                 </div>
                 <div class="effect"></div>
                  <div class="cart-s">
                 <button class="btn btn-info couter-heart">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                <button class="btn btn-danger couter-cart">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                <button class="btn btn-danger couter-cart" data-toggle="modal" data-target="#quickbuy">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
               </div>
               </div>
               
@@ -191,20 +191,20 @@
   }
   @media (min-width: 768px){
   .container-item >img{
-    height: 407px;
+    height: 426px;
   }
   }
 
 
    @media (min-width: 992px){
   .container-item >img{
-    height: 492px;
+    height: 423px;
 
   }
   }
    @media (min-width: 1170px){
   .container-item >img{
-    height: 527px;
+    height: 501px;
 
   }
   }

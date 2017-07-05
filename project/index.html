@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="static/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="static/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
-  <title>project</title>
+  <link rel="stylesheet" href="static/bx-slider/jquery.bxslider.min.css">
+  <title>Baby Store</title>
 </head>
 <body>
   <div id="app">
@@ -15,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="static/jquery/jquery.elevateZoom-3.0.8.min.js"></script>
   <script src="static/typed.js-master/js/typed.js"></script>
-  <script src="static/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+  <script src="static/bx-slider/jquery.bxslider.min.js"></script>
   <script src="static/dist/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -41,78 +40,9 @@
         $('.typed-cursor').css('display','none');
       }) 
      
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        dots: true,
-        margin: 10,
-        nav: true,
-        lazyLoad:true,
-        autoplay:true,
-        autoplayTimeout:4000,
-        responsive: {
-          0: {
-            items: 1
-          },
-          425: {
-            items: 2
-          },
-          600: {
-            items: 3
-          },
-          992: {
-            items: 4
-          },
-          1170: {
-            items: 5
-          }
-        }
-      })
-
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        dots: true,
-        margin: 10,
-        nav: true,
-        lazyLoad:true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        responsive: {
-          0: {
-            items: 1
-          },
-          425: {
-            items: 2
-          },
-          600: {
-            items: 3
-          },
-          992: {
-            items: 4
-          },
-          1170: {
-            items: 5
-          }
-        }
-      })
-     
      $('.carousel').carousel({
       interval: false
      })
-
-      $('.owl-nav .owl-prev').css({
-        position: 'absolute',
-        top: '42%',
-        left: 0
-      })
-      $('.owl-nav .owl-prev').css('font-size', '1.5em');
-      $('.owl-nav .owl-prev').html('<i class="fa fa-angle-double-left" aria-hidden="true"></i>')
-      $('.owl-nav .owl-next').css({
-        position: 'absolute',
-        top: '42%',
-        right: 0
-      })
-      $('.owl-nav .owl-next').css('font-size', '1.5em');
-      $('.owl-nav .owl-next').html('<i class="fa fa-angle-double-right" aria-hidden="true"></i>')
 
       function couterHeart(){
         $('.couter-heart').each(function() {

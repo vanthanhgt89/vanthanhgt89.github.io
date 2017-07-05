@@ -105,30 +105,30 @@
     <nav class="navbar navbar-default nav-sm">
       <div class="container nav-sm-wrap">
         <div class="col-sm-2 col-md-2 logo">
-          <router-link to=""><img src="../assets/logo/thanhlogo.png"></router-link>
+          <router-link to="/"><img src="../assets/logo/thanhlogo.png"></router-link>
         </div>
         <div class="col-sm-10 col-md-10 menu">
           <ul class="menu--item">
             <li class="list item1"><router-link to="/">Trang chủ</router-link></li>
-            <li class="list item2"><router-link to="Introduce">Giới thiệu</router-link ></li>
+            <li class="list item2"><router-link to="introduce">Giới thiệu</router-link ></li>
             <li class="list item3 list-item">
-            <router-link to="" to="Sanpham">Sản phẩm<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
+            <router-link to="" to="product">Sản phẩm<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
 
               <div class="container product">
                 <div class="col-sm-3 col-md-3">
                   <div class="product-list">
-                    <router-link  to="Home"><img src="../assets/menu/menu-img1.jpg" alt=""></router-link >
+                    <router-link  to="product"><img src="../assets/menu/menu-img1.jpg" alt=""></router-link >
                   </div>
                   <ul class="product-list">
-                    <li><router-link to="" to="Sanpham">
+                    <li><router-link to="" to="product">
                       <strong>Dành cho bé sơ sinh</strong>
-                    </router-link to="Sanpham"></li>
-                    <li><router-link to="Sanpham">Bỉm và tã giấy</router-link></li>
-                    <li><router-link to="Sanpham">Sữa</router-link></li>
-                    <li><router-link to="Sanpham">Kem hăm, dưỡng da, phấn rôm</router-link > </li>
-                    <li><router-link to="Sanpham">Quần áo sơ sinh</router-link ></li>
-                    <li><router-link to="Sanpham">Giường cũi gỗ cho bé</router-link ></li>
-                    <li><router-link to="Sanpham">Lôi điện và ghế rung</router-link ></li>
+                    </router-link to="product"></li>
+                    <li><router-link to="product">Bỉm và tã giấy</router-link></li>
+                    <li><router-link to="product">Sữa</router-link></li>
+                    <li><router-link to="product">Kem hăm, dưỡng da, phấn rôm</router-link > </li>
+                    <li><router-link to="product">Quần áo sơ sinh</router-link ></li>
+                    <li><router-link to="product">Giường cũi gỗ cho bé</router-link ></li>
+                    <li><router-link to="product">Lôi điện và ghế rung</router-link ></li>
                     <li></li>
                   </ul>
                 </div>
@@ -138,13 +138,13 @@
                   </div>
                   <ul class="product-list">
                     <li><strong>Thời trang cho bé trai</strong></li>
-                    <li><router-link to="Sanpham">Áo phông</router-link></li>
-                    <li><router-link to="Sanpham">Áo sơ mi</router-link></li>
-                    <li><router-link to="Sanpham">Quần jean</router-link></li>
-                    <li><router-link to="Sanpham">Quần kaki</router-link></li>
-                    <li><router-link to="Sanpham">Quần short</router-link></li>
-                    <li><router-link to="Sanpham">Đồ mặc ở nhà</router-link></li>
-                    <li><router-link to="Sanpham">Giầy dép thời trang</router-link></li>
+                    <li><router-link to="product">Áo phông</router-link></li>
+                    <li><router-link to="product">Áo sơ mi</router-link></li>
+                    <li><router-link to="product">Quần jean</router-link></li>
+                    <li><router-link to="product">Quần kaki</router-link></li>
+                    <li><router-link to="product">Quần short</router-link></li>
+                    <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
+                    <li><router-link to="product">Giầy dép thời trang</router-link></li>
                   </ul>
                 </div>
                 <div class="col-sm-3 col-md-3">
@@ -152,30 +152,30 @@
                     <router-link to=""><img src="../assets/menu/menu-img3.jpg" alt=""></router-link>
                   </div>
                   <ul class="product-list">
-                    <li><router-link to="Sanpham"><strong>Thời trang bé gái</strong></router-link></li>
-                    <li><router-link to="Sanpham">Áo phông</router-link></li>
-                    <li><router-link to="Sanpham">Áo sơ mi</router-link></li>
-                    <li><router-link to="Sanpham">Chân váy</router-link></li>
-                    <li><router-link to="Sanpham">Chân liền</router-link></li>
-                    <li><router-link to="Sanpham">Quần jean</router-link></li>
-                    <li><router-link to="Sanpham">Đồ mặc ở nhà</router-link></li>
-                    <li><router-link to="Sanpham">Giầy dép thời trang</router-link></li>
+                    <li><router-link to="product"><strong>Thời trang bé gái</strong></router-link></li>
+                    <li><router-link to="product">Áo phông</router-link></li>
+                    <li><router-link to="product">Áo sơ mi</router-link></li>
+                    <li><router-link to="product">Chân váy</router-link></li>
+                    <li><router-link to="product">Chân liền</router-link></li>
+                    <li><router-link to="product">Quần jean</router-link></li>
+                    <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
+                    <li><router-link to="product">Giầy dép thời trang</router-link></li>
                   </ul>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
                   <div class="product-list">
-                    <router-link to="Sanpham"><img src="../assets/menu/menu-img4.jpg" alt=""></router-link>
+                    <router-link to="product"><img src="../assets/menu/menu-img4.jpg" alt=""></router-link>
                   </div>
                   <ul class="product-list">
-                    <li><router-link to="Sanpham"><strong>Đồ chơi cho bé</strong></router-link></li>
-                    <li><router-link to="Sanpham">Ô tô </router-link></li>
-                    <li><router-link to="Sanpham">Xe máy</router-link></li>
-                    <li><router-link to="Sanpham">Xe đạp</router-link></li>
-                    <li><router-link to="Sanpham">Đồ chơi xếp hình</router-link></li>
-                    <li><router-link to="Sanpham">Đồ chơi điều khiển</router-link></li>
-                    <li><router-link to="Sanpham">Đồ chơi giáo dục</router-link></li>
-                    <li><router-link to="Sanpham">Sách truyện cho bé</router-link></li>
+                    <li><router-link to="product"><strong>Đồ chơi cho bé</strong></router-link></li>
+                    <li><router-link to="product">Ô tô </router-link></li>
+                    <li><router-link to="product">Xe máy</router-link></li>
+                    <li><router-link to="product">Xe đạp</router-link></li>
+                    <li><router-link to="product">Đồ chơi xếp hình</router-link></li>
+                    <li><router-link to="product">Đồ chơi điều khiển</router-link></li>
+                    <li><router-link to="product">Đồ chơi giáo dục</router-link></li>
+                    <li><router-link to="product">Sách truyện cho bé</router-link></li>
                   </ul>
                 </div>
 
@@ -185,15 +185,15 @@
             <li class="list item4" data-toggle="tooltip"><router-link to="Blog">Blog</router-link>
 
             </li>
-            <li class="list item5"><router-link to="Contact">Liên hệ</router-link></li>
-            <li class="list item6"><router-link to="Saleoff">Khuyến mãi</router-link></li>
+            <li class="list item5"><router-link to="contact">Liên hệ</router-link></li>
+            <li class="list item6"><router-link to="sale-off">Khuyến mãi</router-link></li>
             <li>
               <div class="icon-cart">
-                <router-link to="Cart"> 
+                <router-link to="cart"> 
                 <button class="btn btn-danger">Giỏ hàng  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <span class="couter1">0</span></button>
                 </router-link>
-                <router-link to="Favorite"> 
+                <router-link to="favorite"> 
                 <button class="btn btn-info">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <span class="couter2">0</span></button>
 
@@ -225,17 +225,17 @@
         <ul class="menu--xs">
           <li class="list-xs"><router-link to="/">Trang chủ</router-link></li>
           <li class="list-xs"><router-link to="Introduce">Giới thiệu</router-link></li>
-          <li class="list-xs"><router-link to="Sanpham">Sản phẩm</router-link></li>
+          <li class="list-xs"><router-link to="product">Sản phẩm</router-link></li>
           <li class="list-xs"><router-link to="Blog">Blog</router-link></li>
           <li class="list-xs"><router-link to="Contact">Liên hệ</router-link></li>
         </ul>
       </div>
       <div class="icon-cart-xs">
-       <router-link to="Home"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+       <router-link to="cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
         </router-link>
-        <router-link to="Home"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+        <router-link to="favorite"> <i class="fa fa-heart-o" aria-hidden="true"></i>
         </router-link>
-        <router-link to="Home"> <i class="fa fa-search" aria-hidden="true"></i>
+        <router-link to="search"> <i class="fa fa-search" aria-hidden="true"></i>
         </router-link>
       </div>
     </nav>

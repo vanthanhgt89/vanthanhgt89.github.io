@@ -11,18 +11,21 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <div class="header">
             <div class="box-img">
-              <img src="../assets/topsale/sosinh1.jpg" alt="" class="img-responsive">
+              <img src="../assets/topsale/sosinh1.jpg" alt="" class="img-responsive img-style">
             </div>
             <div class="summary">
               <h4 class="title">Áo thun bé trai Baby Store</h4>
+              <div class="info-text">
               <span class="item">Màu sắc: Kem</span> 
               <span class="item">Size: 6M</span>
-              <span class="item">Số lượng:  
-              <button class="btn-couter" @click="decrease">-</button> 
+              <span class="item">Số lượng:   <button class="btn-couter" @click="decrease">-</button> 
               {{couter}} 
-              <button class='btn-couter' @click="increase">+</button></span>
+              <button class='btn-couter' @click="increase">+</button> </span>
+              </div>
+            <div class="price">
               <ins class="item2">180.000đ</ins> <del class="item2">270.000đ</del>
-              <span ><strong>Thành tiền:</strong> 180.000đ</span>
+            </div>
+              <span class="total">Thành tiền: <strong style="color:red">180.000đ</strong></span>
             </div>
           </div>
         </div>
@@ -32,14 +35,12 @@
             <input type="text" class="form-control info" placeholder="Họ và tên">
             <input type="text" class="form-control info" placeholder="Số điện thoại">
             <input type="text" class="form-control adress" placeholder="Địa chỉ">
-            <button class="btn btn-basic" v-show="show">Thanh toán khi nhận hàng</button>
-            <button class="btn btn-primary" v-show="show" @click="changeButton">Thanh toán bằng thẻ ATM
-            </button>
-            <router-link to="ATMBank">
-            <button class="btn btn-basic" v-show="!show">Dùng thẻ ATM có internet Banking</button>
+         
+            <router-link to="atm-bank">
+            <button class="btn btn-basic" data-dismiss="modal" >Dùng thẻ ATM có internet Banking</button>
             </router-link>
-            <router-link to="VisaCard">
-            <button class="btn btn-primary" v-show="!show" >Dùng thẻ Visa, Master
+            <router-link to="visa-card">
+            <button class="btn btn-primary" data-dismiss="modal"  >Dùng thẻ Visa, Master
             </button></router-link>
           </form>
         </div>
@@ -47,7 +48,7 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
+    
     </div>
   </div>
   
@@ -58,8 +59,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      couter: 1,
-      show: true
+      couter: 1
     }
   },
   methods: {
@@ -71,9 +71,6 @@ export default {
       if (this.couter <= 1) {
         this.couter = 1
       }
-    },
-    changeButton: function () {
-      this.show = false
     }
   }
 }
@@ -89,6 +86,9 @@ export default {
   width: 20%;
 
 }
+.img-style{
+  padding: 10px;
+}
 .summary{
   width: 80%;
   text-align: left;
@@ -100,17 +100,31 @@ export default {
   color:#F8840B;
   text-align: left;
 }
-
+.info-text{
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #eceff1;
+  border-top: 1px solid #eceff1;
+}
 .item{
   display: block;
   width: 31%;
+  float: left;
 }
 
+.price{
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #eceff1;
+}
 .item2{
   display: block;
   width: 47%;
 }
 
+.total{
+  padding: 10px 0;
+}
 .form-group{
   display: flex;
   flex-wrap: wrap;

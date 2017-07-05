@@ -6,24 +6,24 @@
           <span class="">Đồ chơi trẻ em</span>
         </div>
         <div class="title-right">
-          <a href="">Toàn bộ sản phẩm  <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          <router-link to="product">Toàn bộ sản phẩm  <i class="fa fa-angle-right" aria-hidden="true"></i></router-link>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-* col-sm-3 col-md-3" v-for="item in data1">
         <div class="container-item-s" >
-                <router-link to="DetailProduct"><img :src="item.src" class="img-responsive" alt="item.name"></router-link> 
+                <router-link to="detail-product"><img :src="item.src" class="img-responsive" alt="item.name"></router-link> 
                   <div class="title-name">
                   <router-link to=""> {{item.name}}</router-link> 
                 </div>
                 <div class="price-item">
-                   <router-link to="DetailProduct"><ins>{{item.price}}</ins></router-link>
-            <router-link to="DetailProduct"><del>{{item.priceDel}}</del></router-link> 
+                   <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
+            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link> 
                 </div>
                 <div class="effect"></div>
                  <div class="cart-s">
                 <button class="btn btn-info couter-heart">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                <button class="btn btn-danger couter-cart">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                <button class="btn btn-danger couter-cart" data-toggle="modal" data-target="#quickbuy">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
               </div>
               </div>
        </div>

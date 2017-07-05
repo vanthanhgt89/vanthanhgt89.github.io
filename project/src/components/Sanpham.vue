@@ -29,7 +29,7 @@
             <button class="btn btn-primary dropdown-toggle text-box" type="button" data-toggle="dropdown">Sắp xếp theo giá 
               <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li v-for="item in prices" ><router-link to="DetailProduct"><input type="checkbox"> {{item.price}}</router-link></li>
+                <li v-for="item in prices" ><router-link to="detail-product"><input type="checkbox"> {{item.price}}</router-link></li>
 
               </ul>
             </div>
@@ -40,7 +40,7 @@
             <button class="btn btn-primary dropdown-toggle text-box" type="button" data-toggle="dropdown">Sắp xếp theo tuổi
               <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li v-for="item in age" ><router-link to="DetailProduct"><input type="checkbox"> {{item}}</router-link></li>
+                <li v-for="item in age" ><router-link to="detail-product"><input type="checkbox"> {{item}}</router-link></li>
 
               </ul>
             </div>
@@ -57,31 +57,31 @@
             <ul>
 
               <li class="list-1">
-               <router-link to="DetailProduct"> <strong>Đồ sơ sinh</strong></router-link>
+               <router-link to="detail-product"> <strong>Đồ sơ sinh</strong></router-link>
                <ul>
-                <li v-for="item in list1"><router-link to="DetailProduct">{{item}}</router-link></li>
+                <li v-for="item in list1"><router-link to="detail-product">{{item}}</router-link></li>
               </ul>
             </li>
 
             <li class="list-2">
-              <router-link to="DetailProduct"> <strong>Thời trang bé trai</strong></router-link>
+              <router-link to="detail-product"> <strong>Thời trang bé trai</strong></router-link>
               <ul>
-                <li v-for="item in list2"><router-link to="DetailProduct">{{item}}</router-link></li>
+                <li v-for="item in list2"><router-link to="detail-product">{{item}}</router-link></li>
 
               </ul>
             </li>
 
             <li class="list-3">
-              <router-link to="DetailProduct"> <strong>Thời trang bé gái</strong></router-link>
+              <router-link to="detail-product"> <strong>Thời trang bé gái</strong></router-link>
               <ul>
-                <li v-for="item in list3"><router-link to="DetailProduct">{{item}}</router-link></li>
+                <li v-for="item in list3"><router-link to="detail-product">{{item}}</router-link></li>
 
               </ul>
             </li>
 
 
             <li class="list-4">
-              <router-link to="DetailProduct"> <strong>Đồ chơi trẻ em</strong></router-link>
+              <router-link to="detail-product"> <strong>Đồ chơi trẻ em</strong></router-link>
 
               <ul>
                 <li v-for="item in list4"><router-link to="de">{{item}}</router-link></li>

@@ -19,79 +19,12 @@
       <div class="tab-content tab1">
 
         <div id="item1" class="tab-pane fade in active">
-          <div class="owl-carousel owl-theme">
-            <div class="item" v-for="item in specialImg ">
-              <div class="container-item">
-                <img v-bind:data-src="item.src" alt="item.name" class="owl-lazy img-responsive">
-                <router-link to="DetailProduct" class="name"> {{item.name}}</router-link>
-                <router-link to="DetailProduct" class="price"> {{item.price}}</router-link>
-                <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
-                <div v-else=""></div>
-                <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
-                <div v-else=""></div>
-                <div class="icon">
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="item2" class="tab-pane fade in">
-          <div class="owl-carousel owl-theme">
-             <div class="item" v-for="item in sosinhImg ">
-              <div class="container-item">
-                <img v-bind:src="item.src" alt="item.name" class="img-responsive">
-                <router-link to="DetailProduct" class="name"> {{item.name}}</router-link>
-                <router-link to="DetailProduct" class="price"> {{item.price}}</router-link>
-                <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
-                <div v-else=""></div>
-                <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
-                <div v-else=""></div>
-                <div class="icon">
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="item3" class="tab-pane fade in">
-          <div class="owl-carousel owl-theme">
-            <div class="item" v-for="item in boyImg " >
-              <div class="container-item">
-                <img v-bind:src="item.src" alt="item.name" class="img-responsive">
-                <router-link to="DetailProduct" class="name"> {{item.name}}</router-link>
-                <router-link to="DetailProduct" class="price"> {{item.price}}</router-link>
-                <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
-                <div v-else=""></div>
-                <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
-                <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
-                <div v-else=""></div>
-                <div class="icon">
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div id="item4" class="tab-pane fade in">
-          <div class="owl-carousel owl-theme">
-           <div class="item" v-for="item in girlImg ">
-            <div class="container-item">
+          <div class="slider1">
+            <div class="slide" v-for="item in specialImg">
+               <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
-              <router-link to="DetailProduct" class="name"> {{item.name}}</router-link>
-              <router-link to="DetailProduct" class="price"> {{item.price}}</router-link>
+              <router-link to="detail-product" class="name"> {{item.name}}</router-link>
+              <router-link to="detail-product" class="price"> {{item.price}}</router-link>
               <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
               <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
               <div v-else=""></div>
@@ -103,18 +36,18 @@
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
               </div>
             </div>
+            </div>
           </div>
+        </div> <!-- end item1 -->
 
-        </div>
-      </div>
 
-      <div id="item5" class="tab-pane fade in">
-        <div class="owl-carousel owl-theme">
-          <div class="item" v-for="item in toyImg ">
-            <div class="container-item">
+         <div id="item2" class="tab-pane fade in active">
+          <div class="slider1">
+            <div class="slide" v-for="item in sosinhImg">
+               <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
-              <router-link to="DetailProduct" class="name"> {{item.name}}</router-link>
-              <router-link to="DetailProduct" class="price"> {{item.price}}</router-link>
+              <router-link to="detail-product" class="name"> {{item.name}}</router-link>
+              <router-link to="detail-product" class="price"> {{item.price}}</router-link>
               <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
               <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
               <div v-else=""></div>
@@ -126,19 +59,99 @@
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
               </div>
             </div>
+            </div>
           </div>
+        </div> <!-- end item2 -->
 
 
-        </div>
-      </div>
-    </div>
+         <div id="item3" class="tab-pane fade in active">
+          <div class="slider1">
+            <div class="slide" v-for="item in boyImg">
+               <div class="container-item">
+              <img v-bind:src="item.src" alt="item.name" class="img-responsive">
+              <router-link to="detail-product" class="name"> {{item.name}}</router-link>
+              <router-link to="detail-product" class="price"> {{item.price}}</router-link>
+              <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
+              <div v-else=""></div>
+              <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
+              <div v-else=""></div>
+              <div class="icon">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div> <!-- end item3 -->
+
+         <div id="item4" class="tab-pane fade in active">
+          <div class="slider1">
+            <div class="slide" v-for="item in girlImg">
+               <div class="container-item">
+              <img v-bind:src="item.src" alt="item.name" class="img-responsive">
+              <router-link to="detail-product" class="name"> {{item.name}}</router-link>
+              <router-link to="detail-product" class="price"> {{item.price}}</router-link>
+              <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
+              <div v-else=""></div>
+              <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
+              <div v-else=""></div>
+              <div class="icon">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div> <!-- end item4 -->
+
+         <div id="item5" class="tab-pane fade in active">
+          <div class="slider1">
+            <div class="slide" v-for="item in toyImg">
+               <div class="container-item">
+              <img v-bind:src="item.src" alt="item.name" class="img-responsive">
+              <router-link to="detail-product" class="name"> {{item.name}}</router-link>
+              <router-link to="detail-product" class="price"> {{item.price}}</router-link>
+              <div v-if="item.status == 'new'" v-bind:class="tagStatus[0]"></div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagStatus[1]"></div>
+              <div v-else=""></div>
+              <div v-if="item.status == 'new'" v-bind:class="tagName[0]">{{item.status}}</div>
+              <div v-else-if="item.status == 'sale'" v-bind:class="tagName[1]">{{item.salePercent}}</div>
+              <div v-else=""></div>
+              <div class="icon">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div> <!-- end item5 -->
+
+    
+
   </div>
+</div>
 </div>
 </template>
 
 <script>
   export default {
     name: 'specialProduct',
+    mounted () {
+      window.$('.slider1').bxSlider({
+        slideWidth: 200,
+        minSlides: 3,
+        maxSlides: 5,
+        slideMargin: 40
+      })
+      window.$('.bx-wrapper').css({
+        'border': 'none',
+        'box-shadow': 'none'
+      })
+    },
     data () {
       return {
         tagStatus: ['tag-left', 'tag-right'],

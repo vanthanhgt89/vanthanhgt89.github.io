@@ -6,30 +6,30 @@
           <span class="">Đồ cho bé sơ sinh</span>
         </div>
         <div class="title-right">
-          <router-link to="">Toàn bộ sản phẩm  <i class="fa fa-angle-right" aria-hidden="true"></i></router-link>
+          <router-link to="product">Toàn bộ sản phẩm  <i class="fa fa-angle-right" aria-hidden="true"></i></router-link>
         </div>
       </div>
 
       <div class="col-xs-* col-sm-6 col-md-6">
        <div class="container-item1">
-       <router-link to="Sanpham"> <img :src="sosinhImg[0].src" alt="sosinhImg[0].name" class="img-responsive"></router-link>
+       <router-link to="product"> <img :src="sosinhImg[0].src" alt="sosinhImg[0].name" class="img-responsive"></router-link>
         <div class="name">
           <div class="text-l"></div>  
-          <router-link to="Sanpham"><button class="btn btn-primary"> Xem toàn bộ sản phẩm</button></router-link>
+          <router-link to="product"><button class="btn btn-primary"> Xem toàn bộ sản phẩm</button></router-link>
         </div>
       </div>
     </div>
     <div class="col-xs-* col-sm-6 col-md-6">
      <div class="col-xs-* col-sm-4 col-md-4" v-for="item in data1">
        <div class="container-item-s">
-        <router-link to="DetailProduct"><img :src="item.src" class="img-responsive" alt=""></router-link>
+        <router-link to="detail-product"><img :src="item.src" class="img-responsive" alt=""></router-link>
         <div class="info">
           <div class="title">
             <router-link to="">{{item.name}}</router-link>
           </div>
           <div class="price">
-            <router-link to="DetailProduct"><ins>{{item.price}}</ins></router-link>
-            <router-link to="DetailProduct"><del>{{item.priceDel}}</del></router-link>
+            <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
+            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link>
           </div>
         </div>
         <div class="cart-s">
@@ -44,14 +44,14 @@
 <div class="row second-row" >
   <div class="col-sm-3 col-md-3" v-for="item in data2">
     <div class="container-item-l">
-     <router-link to="DetailProduct"> <img :src="item.src" class="img-responsive" alt=""></router-link>
+     <router-link to="detail-product"> <img :src="item.src" class="img-responsive" alt=""></router-link>
       <div class="info">
         <div class="title">
           <router-link to="">{{item.name}}</router-link>
         </div>
         <div class="price">
-           <router-link to="DetailProduct"><ins>{{item.price}}</ins></router-link>
-            <router-link to="DetailProduct"><del>{{item.priceDel}}</del></router-link>
+           <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
+            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link>
         </div>
       </div>
       <div class="cart-l">
