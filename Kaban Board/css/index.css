@@ -1,0 +1,27 @@
+.content{
+	display: flex;
+}
+
+.title {
+	padding: 15px;
+}
+
+
+.job-title{
+	font-size: 1rem;
+	padding: 10px;
+}
+
+.job-title, .job-list{
+	margin: 0;
+}
+
+
+.ui-state-highlight{
+	background: #e0e0e0;
+	height: calc(1.5rem + 20px);
+}
+
+.dragging{
+	transform: rotate(1deg);
+}

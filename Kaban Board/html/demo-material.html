@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplication Kaban</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+	<style>
+		.container{
+			width:100%;
+		}
+
+		.list{
+			width:100%;
+			list-style:none;
+		}
+
+		.list-item, .list-item1{
+			/*   color:white; */
+			background:red;
+			border:1px solid;
+			width:15%;
+			float:left;
+		}
+
+		@media (min-width:425px){
+			#submit{
+				display:block; 
+				float: right;
+			}
+			.list:not(:first-child){
+				display:none;
+			}
+			.list-item{
+				display: block!important;
+				width:90%;
+			}
+			.list-item1{
+				width:100%;
+				display:none;
+			}
+			
+		}
+
+		@media (min-width:768px){
+			#submit{
+				display:none; 
+			}
+			.list{
+				display:block;
+			}
+
+			.list-item{
+				width:15%;
+			}
+			.list-item1{
+				width:15%;
+				display:block;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <div >
+		<div class="row">
+			<div class="col s5">1</div>
+			<div class="col s2">2</div>
+			<div class="col s3">3</div>
+			<div class="col s2">4</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12"><span class="flow-text">This div is 12-columns wide on all screen sizes</span></div>
+			<div class="col s6 offset-s6"><span class="flow-text">6-columns (offset-by-6)</span></div>
+		</div>
+
+		<div class="row">
+			<div class="col s7 push-s5"><span class="flow-text">This div is 7-columns wide on pushed to the right by 5-columns.</span></div>
+			<div class="col s5 pull-s7"><span class="flow-text">5-columns wide pulled to the left by 7-columns.</span></div>
+		</div>
+
+		<div class="divider"></div> 
+		<div class="section">
+			<h5>Section 1</h5>
+			<p>Stuff</p>
+		</div>
+		<div class="divider"></div>
+		<div class="section">
+			<h5>Section 2</h5>
+			<p>Stuff</p>
+		</div>
+		<div class="divider"></div>
+		<div class="section">
+			<h5>Section 3</h5>
+			<p>Stuff</p>
+		</div>
+
+		<div class="row">
+			<div class="grid-example col s12"><span class="flow-text">I am always full-width (col s12)</span></div>
+			<div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+		</div>
+		<div class="row">
+			<div class="col s9 m4 l3 item valign-wrapper">
+				<h4 class="truncate flow-text">This is an extremely long title that will be truncated</h4>
+				<h4 class="left-align">Canh giua khung</h4>
+			</div>
+		</div>
+
+		<div class="hide-on-med-and-up item1">
+
+		</div>	
+
+		<div class="card-panel hoverable item1"> Hoverable Card Panel</div>
+
+		<a id="scale-demo" href="#!" class="btn-floating btn-large scale-transition">
+			<i class="material-icons">add</i>
+		</a>
+	-->
+	<!-- Scaled out -->
+		<!-- <a id="scale-demo" href="#!" class="btn-floating btn-large scale-transition scale-out">
+			<i class="material-icons">add</i>
+		</a> -->
+		<!-- <a id="scale-demo-trigger" href="#!" class="btn right">Toggle Scale</a>
+		 <span class="new badge #ccc">4</span>
+		 <span class="new badge blue">4</span> -->
+		 <div class="container"> 
+		 	<ul class="list">
+		 		<li class="list-item">Home</li>
+		 		<li class="list-item1">News</li>
+		 		<li class="list-item1">contact</li>
+		 		<li class="list-item1">About</li>
+		 	</ul>
+		 	<button id="submit">&#9776</button>
+
+		 </div>
+
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+		<script>
+			$('#submit').click(function(){
+				$('.list').css('display','block');
+			})
+
+
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplication Kaban</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="../css/index.css">
+
+
+	
+</head>
+<body>
+
+	<!-- <div class="row "> -->
+	<h1 class="flow-text center-align  teal darken-1 white-text title">Kaban Board</h1>
+	<div class="container">
+		<div class="row ">
+
+
+			<div class="col m4">
+				<h5 class=" red darken-1 white-text job-title">
+					TODO
+					<span class="badge white-text left-align">(4)</span>
+				</h5>
+
+				<ul class="collection job-list sorted-list" id="todo">
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+				</ul>
+
+				<div class="action">
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s12">
+								<input id="email" type="email" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
+								<label for="email" data-error="wrong" data-success="right" class="addjob">Email</label>
+								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div> <!--end todo -->
+
+
+			<div class="col m4">
+				<h5 class=" amber darken-4 white-text job-title">
+					DOING
+					<span class="badge white-text left-align">(4)</span>
+				</h5>
+
+				<ul class="collection job-list sorted-list" id="doing">
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+				</ul>
+
+				<div class="action">
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s12">
+								<input id="email" type="email" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
+								<label for="email" data-error="wrong" data-success="right" class="addjob">Email</label>
+								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div> <!--end doing -->
+
+
+			<div class="col m4">
+				<h5 class=" green darken-3 white-text job-title">
+					DONE
+					<span class="badge white-text left-align">(4)</span>
+				</h5>
+
+				<ul class="collection job-list sorted-list" id="done">
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+
+					<li class="collection-item ui-state-default">
+						Alvin <span class="badge"><i class="material-icons">delete</i></span>
+					</li>
+				</ul>
+
+				<div class="action">
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s12">
+								<input id="text" type="text" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
+								<label for="email" data-error="wrong" data-success="right" class="addjob">New job</label>
+								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div> <!--end done -->
+
+
+
+
+
+		</div>
+
+	</div>
+
+	<!-- </div> -->
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>
