@@ -1,0 +1,116 @@
+.banner{
+    width: 100%;
+    height: 300px;
+}
+@media (min-width:1px) {
+    .menu {
+        width: 50% ;
+        float:left;
+    }
+    .out{
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    .menu {
+        width: 100%;
+    }
+
+}
+/*== form ===*/
+#modal{
+    position: fixed;
+    top: 100px;
+    left: 41%;
+    width:400px;
+}
+#modal .nav-tabs>li{
+    width: 50%;
+}
+#formlogin{
+    padding: 10px 15px;
+    background: white;
+    font-size:1em;
+}
+
+#email,#password,#submit{
+    width: 100%;
+    height: 40px;
+    padding:10px 10px;
+    margin:10px 0;
+    outline: none;
+    background: #FAFFBD;
+    border-bottom: 1px solid black;
+}
+
+#submit{
+    text-align: center;
+    background: #00695C;
+}
+#face{
+    background: #2196F3;
+
+}
+.gmail{
+    background: #755B24;
+}
+.back{
+    display: block;
+    width: 3%;
+    position: fixed;
+    right:0;
+    bottom:0;
+}
+
+#top{
+    display: block;
+    width: 3%;
+    position: absolute;
+    top: 0;
+}
+
+/*animation go*/
+#about{
+    position: absolute;
+    top: 250px;
+    left: calc(50% - 10px);
+    width: 30px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 15px;
+    /*overflow: hidden;*/
+}
+
+#about::before{
+    position: absolute;
+    top: 0;
+    left:14px;
+    width: 5px;
+    height: 5px;
+    margin-left: -2px;
+    content: '';
+    animation: run 1s linear infinite;
+    border-radius: 100%;
+    background-color: #fff;
+}
+@keyframes run {
+    from {top: 0px;opacity: 1}
+    to {top: 50px;opacity: 0}
+}
+body{
+    position: relative;
+}
+
+div.col-sm-9 div {
+    height: 250px;
+    font-size: 28px;
+}
+.affix {
+    top: 20px;
+}
+
+ #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {color: #fff; background-color: #00bcd4;}
+  #section42 {color: #fff; background-color: #009688;}
