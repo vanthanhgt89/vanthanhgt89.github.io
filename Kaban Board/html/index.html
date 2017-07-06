@@ -27,38 +27,32 @@
 				</h5>
 
 				<ul class="collection job-list sorted-list" id="todo">
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
+					
 				</ul>
 
 				<div class="action">
 					<div class="row">
-						<form class="col s12">
-							<div class="row">
-								<div class="input-field col s12">
-								<input id="email" type="email" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
-								<label for="email" data-error="wrong" data-success="right" class="addjob">Email</label>
-								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
-								</div>
-							</div>
-						</form>
+						<div class="input-field col s12">
+							<input id="email" type="text" class="validate addjob" onkeydown="app.newJob('e','todo', this)">
+							<label for="email" data-error="wrong" data-success="right" class="addjob">New job</label>
+
+						</div>
 					</div>
 				</div>
 				
 			</div> <!--end todo -->
+
+			<!-- modal materializess -->		
+			<div id="modal-confirm" class="modal">
+				<div class="modal-content">
+					<h4>Comfirm delete</h4>
+					<p>Are you sure to delete this job</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close  btn-flat" >Cancel</a>
+					<a href="#!" class="modal-action waves-effect waves-light btn" id="btn-delete">Agree</a>
+				</div>
+			</div>
 
 
 			<div class="col m4">
@@ -68,34 +62,14 @@
 				</h5>
 
 				<ul class="collection job-list sorted-list" id="doing">
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
+					
 				</ul>
 
 				<div class="action">
-					<div class="row">
-						<form class="col s12">
-							<div class="row">
-								<div class="input-field col s12">
-								<input id="email" type="email" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
-								<label for="email" data-error="wrong" data-success="right" class="addjob">Email</label>
-								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
-								</div>
-							</div>
-						</form>
+					<div class="input-field col s12">
+						<input id="email" type="text" class="validate addjob" onkeydown="app.newJob('e','doing', this)">
+						<label for="email" data-error="wrong" data-success="right" class="addjob">New job</label>
+
 					</div>
 				</div>
 				
@@ -109,34 +83,13 @@
 				</h5>
 
 				<ul class="collection job-list sorted-list" id="done">
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
-
-					<li class="collection-item ui-state-default">
-						Alvin <span class="badge"><i class="material-icons">delete</i></span>
-					</li>
+					
 				</ul>
 
 				<div class="action">
-					<div class="row">
-						<form class="col s12">
-							<div class="row">
-								<div class="input-field col s12">
-								<input id="text" type="text" class="validate addjob" onkeydown="app.newjob(e,'done', this)">
-								<label for="email" data-error="wrong" data-success="right" class="addjob">New job</label>
-								<!-- <button class="waves-effect waves-light btn submit"> New Job</button> -->
-								</div>
-							</div>
-						</form>
+					<div class="input-field col s12">
+						<input id="text" type="text" onkeydown="return app.newJob(event,'done', this)">
+						<label for="text" >New job</label>
 					</div>
 				</div>
 				

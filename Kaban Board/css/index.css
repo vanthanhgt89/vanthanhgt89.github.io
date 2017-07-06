@@ -25,3 +25,31 @@
 .dragging{
 	transform: rotate(1deg);
 }
+
+.btn-flat{
+	background: #e53935 ;
+	color: white;
+}
+
+.modal{
+	width: 40%;
+}
+
+.collection-item .badge {
+	margin-right: -15px;
+	padding-right: 0;
+}
+
+.collection-item .badge .material-icons{
+	font-size: 1.2em;
+	transition: all 0.3s linear;
+	opacity:0;
+}
+
+.collection-item:hover .badge .material-icons{
+	opacity: 1;
+	background: #e0e0e0;
+}
+
+
+
