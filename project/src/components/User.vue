@@ -20,58 +20,69 @@
             </li>
             <li>
               <div class="title">
-                <h4>Quản lý giao dịch</h4>
+                <h4>Quản lý tài khoản</h4>
               </div>
             </li>
 
             <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a data-toggle="pill" href="#favorite">Sản phẩm yêu thích</a></li>
+              <li class="active"><a data-toggle="pill" href="#favorite">Thông tin cá nhân</a></li>
               <li><a data-toggle="pill" href="#cart">Đơn hàng</a></li>
-              <li><a data-toggle="pill" href="#adress">Địa chỉ nhận hàng</a></li>
+              <li><a data-toggle="pill" href="#adress">Thông tin cá nhân</a></li>
               <li><a data-toggle="pill" href="#history">Lịch sử giao dịch</a></li>
             </ul>
             
 
 
 
-        </ul>
-      </div>
-      <div class="col-md-9">
-       <div class="tab-content ">
-        <div id="favorite" class="tab-pane fade in active">
-          <h3>Sản phẩm yêu thích</h3>
-          <div class="col-md-3" v-for="(item,index) in image">
-          <div class="container-item">
-            <img :src="item.src" alt="item.name" class="img-responsive thumbnail image">
-            <div class="price">
-            <ins>{{item.priceIns}}</ins><del>{{item.priceDel}}</del></i> 
-            </div>              
-            <p>{{item.name}}</p> 
-            <div class="cart" >
-             <button class="btn btn-danger" >Mua hàng</button>
+          </ul>
+        </div>
+        <div class="col-md-9">
+         <div class="tab-content">
+          <div id="favorite" class="tab-pane fade in active">
+            <!-- <h3>Thông tin cá nhân</h3> -->
+            <div class="row">
+              <div class="col-xs- col-sm-6">
+                <div class="container-item">
+                  <h3>Thông tin chung</h3>
+                  <ul>
+                    <li><i class="fa fa-user-circle-o" aria-hidden="true"></i> Bùi Văn Thanh</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> 0988260505</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> vanthanhgt89@gmail.com
+                    </li>
+                    <li><i class="fa fa-birthday-cake" aria-hidden="true"></i> 06/11/1989</li>
+                  </ul>
+                  <button class="btn btn-primary">Chỉnh sửa</button>
+                </div>
+              </div>
+              <div class="col-xs- col-sm-6">
+              <div class="container-item">
+                <h3>Địa chỉ và tài khoản</h3>
+                <ul>
+                 <li><strong>Địa chỉ giao hàng:</strong></li>
+                 <li>Số 15 - Quang Tiến - Đại Mỗ - Hà Nội</li>
+                 <li><strong>Thông tin tài khoản:</strong></li>
+                 <li>Số TK: 0590107650007 ngân hàng MB</li>
+               </ul>
+             </div>
+             <button class="btn btn-primary">Chỉnh sửa</button>
+             </div>
            </div>
-           <div class="delete">
-             <button type="button" @click="hidden(index)" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash" aria-hidden="true"></i></button>
 
-           </div>
 
          </div>
 
-       </div>
 
-         
-        </div>
-        <div id="cart" class="tab-pane fade">
+         <div id="cart" class="tab-pane fade">
           <h3>Đơn hàng</h3>
           <table class="order-table">
-          <thead>
-           <th>Mã đơn</th>
-            <th>Ngày đặt hàng</th>
-            <th>Tổng tiền</th>
-            <th>Tình trạng</th>
-          </thead>
+            <thead>
+             <th>Mã đơn</th>
+             <th>Ngày đặt hàng</th>
+             <th>Tổng tiền</th>
+             <th>Tình trạng</th>
+           </thead>
 
-          <tbody>
+           <tbody>
             <tr class="row-item">
               <td>0100154</td>
               <td>05/06/2017</td>
@@ -79,73 +90,77 @@
               <td class="order-status order-accept">Đã nhận hàng</td>
             </tr>
 
-             <tr class="row-item">
+            <tr class="row-item">
               <td>0145540</td>
               <td>05/06/2017</td>
               <td >1.800.000đ</td>
               <td class="order-status order-transport">Đang vận chuyển</td>
             </tr>
 
-             <tr class="row-item">
+            <tr class="row-item">
               <td>0235140</td>
               <td>05/06/2017</td>
               <td>1.200.000đ</td>
               <td class="order-status order-cancel">Hủy</td>
             </tr>
           </tbody>
-           
-          </table>
-        </div>
-        <div id="adress" class="tab-pane fade">
-          <h3>Địa chỉ nhận hàng</h3>
-          <form action="" class="form-group">
-            <div class="form-item" v-for="item in list">
+
+        </table>
+      </div><!-- end cart-->
+
+      <div id="adress" class="tab-pane fade">
+        <h3>Địa chỉ nhận hàng</h3>
+        <form action="" class="form-group">
+          <div class="form-item" v-for="item in list">
             <label for="email">{{item.name}} </label>
             <input class="input-register"  type="text" id="email"  :value="item.value" disabled>
             <button class="btn btn-primary btn-repair"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Chỉnh sửa</button>
-            </div>
+          </div>
           <button class="btn btn-primary btn-save">Lưu thông tin</button>
-          </form>
-        </div>
-        <div id="history" class="tab-pane fade">
-          <h3>Lịch sử giao dịch</h3>
-          <table class="order-table">
+
+
+
+
+        </form>
+      </div><!-- end adress-->
+      <div id="history" class="tab-pane fade">
+        <h3>Lịch sử giao dịch</h3>
+        <table class="order-table">
           <thead>
            <th>Mã đơn</th>
-            <th>Ngày đặt hàng</th>
-            <th>Tổng tiền</th>
-            <th>Tình trạng</th>
-          </thead>
+           <th>Ngày đặt hàng</th>
+           <th>Tổng tiền</th>
+           <th>Tình trạng</th>
+         </thead>
 
-          <tbody>
-            <tr class="row-item" v-for="item in list1">
-              <td>{{item.code}}</td>
-              <td>{{item.date}}</td>
-              <td>{{item.money}}</td>
-              <td class="order-status">{{item.status}}</td>
-            </tr>
-           
-          </tbody>
-           
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <!-- end nav-blog-->
+         <tbody>
+          <tr class="row-item" v-for="item in list1">
+            <td>{{item.code}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.money}}</td>
+            <td class="order-status">{{item.status}}</td>
+          </tr>
 
-     
-     <ul class="pagination">
-      <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-      <li><a href="#">1</a></li>
-      <li class="active"><a href="#">2</a></li>
-      <li ><a href="#">3</a></li>
-      <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+        </tbody>
 
-
-    </ul>
-
+      </table>
+    </div><!-- end history-->
   </div>
+</div>
+
+
+
+<ul class="pagination">
+  <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+  <li><a href="#">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li ><a href="#">3</a></li>
+  <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+
+
+</ul>
+
+</div>
 </div>
 </div>
 </div>
@@ -244,20 +259,12 @@
   transition: all 0.3s linear;
 }
 
-.list2{
-  padding: 5px 0;
-  transform: translateX(-10px);
-  transition: all 0.3s linear;
-}
 
 .list1:hover{
   transform: translateX(10px);
   color:#F08113;
 }
-.list2:hover{
-  transform: translateX(5px);
-  color: #F08113;
-}
+
 
 h3{
   text-transform: uppercase;
@@ -286,47 +293,11 @@ h3{
 .nav >li.active >a{
   background: #ef6c00;
 }
-.container-item{
-  border: 1px solid rgba(85, 85, 85, 0.64);
-  position: relative;
-  text-align: left;
-  padding: 5px;
-}
 
 
 
-.delete{
-  position: absolute;
-  top:0;
-  left: 0;
-}
 
-.price{
-  height: 25px;
-}
-ins{
-  display: block;
-  float: left;
-  color: red;
-  width: 50%;
-}
-del{
-  display: block;
-  float: right;
-}
 
-.container-item >p{
-  font-size: 0.8em;
-  text-align: justify;
-}
-
-.cart{
-  display: flex;
-  justify-content: flex-end;
-}
-.container-item >button{
-  display: block;
-}
 
 .pagination{
   width: 100%;
@@ -382,6 +353,13 @@ label{
   float: right!important;
   background: #ef6c00;
   border:1px solid #ef6c00;
+}
+
+.fa{
+  color: orange;
+}
+.fa-pencil-square-o{
+  color: white;
 }
 .btn-save{
   background: #ef6c00;

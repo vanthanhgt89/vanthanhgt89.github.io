@@ -101,7 +101,8 @@
   background: #F08113;
   float: left;
   color: white;
-  padding: 0 10px
+  width: 20%;
+  padding: 0 15px
 }
 
 
@@ -115,13 +116,25 @@
   .title-right{
   padding: 0;  
   }
+  .title-left{
+    width: 50%;
+  }
 }
 @media (min-width: 425px){
   .title-right{
   padding: 0 15px;  
   }
 }
-
+@media (min-width: 768px){
+  .title-left{
+    width: 30%;
+  }
+}
+@media (min-width: 992px){
+  .title-left{
+    width: 20%;
+  }
+}
 
   .container-item{
     position: relative;

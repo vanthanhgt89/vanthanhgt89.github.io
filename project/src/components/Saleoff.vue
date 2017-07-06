@@ -1,9 +1,9 @@
 <template>
   <div class="container">
       <div class="row">
-        <div class="col-sm-4 " v-for="item in data1" style="border: 1px solid">
+        <div class="col-sm-6 " v-for="item in data1">
           <div class="container-item">
-            <img :src="item.src" alt="" class="img-responsive">
+            <router-link to='detail-product'><img :src="item.src" alt="" class="img-responsive"></router-link>
           </div>
         </div>
       </div>
@@ -50,7 +50,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container-item{
-  margin: 20px 0;
-  border: 1px solid;
+  margin: 40px 0;
 }
 </style>

@@ -17,14 +17,14 @@
     <div class="container footer">
       <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-        <h4>Thời gian mở cửa</h4>
+        <h4 class="title-footer">Thời gian mở cửa</h4>
         <ul>
           <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
           <li>Thứ 7, CN: 9AM - 8PM</li>
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4><router-link to="introduce">Giới thiệu</router-link></h4>
+         <h4 class="title-footer"><router-link to="introduce">Giới thiệu</router-link></h4>
         <ul>
           <li><router-link to="introduce">Về chúng tôi</router-link></li>
           <li><router-link to="introduce">Hệ thống cửa hàng</router-link></li>
@@ -34,7 +34,7 @@
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4><router-link to="">Hướng dẫn hỗ trợ</router-link></h4>
+         <h4 class="title-footer"><router-link to="">Hướng dẫn hỗ trợ</router-link></h4>
         <ul>
           <li>Hướng dẫn mua hàng</li>
           <li>Vận chuyển - giao hàng</li>
@@ -45,7 +45,7 @@
         </ul>
       </div>
        <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4>Chính sách mua hàng</h4>
+         <h4 class="title-footer">Chính sách mua hàng</h4>
         <ul>
           <li>Chính sách tích điểm</li>
           <li>Chính sách bán sỉ</li>
@@ -75,7 +75,7 @@ export default {
 <style scoped>
   footer{
     margin:50px auto 0;
-    background: rgba(119, 119, 119, 0.54);
+    background: rgba(238, 238, 238, 0.5);
   }
   .register{
     height: 300px;
@@ -94,10 +94,6 @@ export default {
     margin: 15px auto;
     padding: 10px;
   }
-  h4{
-    width: 70%;
-    border-bottom: 1px solid orange;
-  }
 
   li{
     font-size: 0.8em;
@@ -108,7 +104,7 @@ export default {
   }
   li:hover {
     transform: translateX(10px);
-    color: white;
+    color: orange;
   }
   input{
     position: relative;
@@ -153,26 +149,35 @@ export default {
     .icon{
       left: 21%;
     }
+
+    .title-footer{
+      font-size: 0.8em;
+      font-weight: 600;
+      border-bottom: 1px solid orange;
+    }
   }
 
   @media (min-width: 425px){
     input{
-      width: 30%;
-      left: -40px;
+      width: 50%;
+      left: -30px;
       font-size: 0.8em;
     }
     button{
-      left: 54%;
+      left: 60%;
       font-size: 0.8em;
     }
 
     .icon{
-      left: 26%;
+      left: 22%;
     }
+
+   
   }
 
     @media (min-width: 768px){
      input{
+      width: 30%;
       left: 0px;
       font-size: 1em;
     }

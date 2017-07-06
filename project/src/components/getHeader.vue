@@ -7,242 +7,250 @@
       </div>
 
       <div class="col-xs-7 col-sm-6 col-md-6 menu__info--item2">
-        <div class="register" v-html="html2">
-        <!-- <button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button> -->
+        <div class="register" >
+          <button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button>
         </div>
-        <div class="sign-in" v-html="html1">
-         <!--  <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</button> -->
+        <div class="sign-in" >
+          <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</button>
         </div>
-      </div>
-    </div>
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog user-modal">
-        <ul class="nav nav-tabs menu-login">
-          <li class="active"><a data-toggle="tab" href="#login" class="text-center">Đăng nhập</a></li>
-          <li><a data-toggle="tab" href="#register" class="text-center">Đăng ký</a></li>
-        </ul>
-        <div class="tab-content">
-          <div id="login" class="tab-pane fade in active">
-            <!-- Modal content-->
-            <div class="modal-content myForm">
-
-              <div class="modal-body">
-                <form action="">
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email-register"
-                           placeholder="Enter email" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password-register"
-                           placeholder="Enter password" name="password">
-                  </div>
-                  <div class="checkbox">
-                    <label class="text-color"><input type="checkbox" name="remember"> Ghi
-                      nhớ tài khoản</label>
-                  </div>
-                  <router-link to="/">
-                  <button  class="btn btn-primary getsubmit" data-dismiss="modal" @click="changeHtml">Đăng nhập
-                  </button>
-                  </router-link>
-                  <div class="remember">
-                    <label class="text-color"><i class="fa fa-question-circle-o"
-                      aria-hidden="true"></i>Quên mật khẩu
-                      ?</label>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer" id="login-icon">
-                <div class="col-md-* text-center login-face">
-                  <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
-                </div>
-                <div class="col-md-* text-center login-gmail">
-                  <a href="https://accounts.google.com/signin"><i class="fa fa-google" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="register" class="tab-pane fade">
-            <!-- Modal content-->
-            <div class="modal-content myForm">
-              <div class="modal-body ">
-                <form action="">
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email"
-                           placeholder="Enter email" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password"
-                           placeholder="Enter password" name="password">
-                  </div>
-                  <div class="checkbox">
-                    <label class="text-color"><input type="checkbox" name="remember">Hiển thị
-                      mật khẩu</label>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Họ và tên:</label>
-                    <input type="text" class="form-control" id="name"
-                           placeholder="Họ và tên" name="name">
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Số điện thoại:</label>
-                    <input type="text" class="form-control" id="phone"
-                           placeholder="Số điện thoại" name="phone">
-                  </div>
-                  <button type="submit" class="btn btn-primary getsubmit">Đăng ký
-                  </button>
-                </form>
-              </div>
-            </div>
+        <div class="logged"> 
+          <img src="../assets/avarta-s.png" alt="" class="img-responsive avarta-s"> 
+          <div class="dropdown"> 
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Bùi Văn Thanh</button> 
+          <ul class="dropdown-menu"> 
+            <router-link to='user'><li class="dropdown-text user-info">Quản lý tài khoản</li></router-link> 
+            <li class="dropdown-text sign-out">Đăng xuất</li> </ul> </div> 
           </div>
         </div>
-
-
       </div>
-    </div>
-    <!-- nav desktop-->
-    <nav class="navbar navbar-default nav-sm">
-      <div class="container nav-sm-wrap">
-        <div class="col-sm-2 col-md-2 logo">
-          <router-link to="/"><img src="../assets/logo/thanhlogo.png"></router-link>
-        </div>
-        <div class="col-sm-10 col-md-10 menu">
-          <ul class="menu--item">
-            <li class="list item1"><router-link to="/">Trang chủ</router-link></li>
-            <li class="list item2"><router-link to="introduce">Giới thiệu</router-link ></li>
-            <li class="list item3 list-item">
-            <router-link to="" to="product">Sản phẩm<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
-
-              <div class="container product">
-                <div class="col-sm-3 col-md-3">
-                  <div class="product-list">
-                    <router-link  to="product"><img src="../assets/menu/menu-img1.jpg" alt=""></router-link >
-                  </div>
-                  <ul class="product-list">
-                    <li><router-link to="" to="product">
-                      <strong>Dành cho bé sơ sinh</strong>
-                    </router-link to="product"></li>
-                    <li><router-link to="product">Bỉm và tã giấy</router-link></li>
-                    <li><router-link to="product">Sữa</router-link></li>
-                    <li><router-link to="product">Kem hăm, dưỡng da, phấn rôm</router-link > </li>
-                    <li><router-link to="product">Quần áo sơ sinh</router-link ></li>
-                    <li><router-link to="product">Giường cũi gỗ cho bé</router-link ></li>
-                    <li><router-link to="product">Lôi điện và ghế rung</router-link ></li>
-                    <li></li>
-                  </ul>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                  <div class="product-list">
-                    <router-link to=""><img src="../assets/menu/menu-img2.jpg" alt=""></router-link>
-                  </div>
-                  <ul class="product-list">
-                    <li><strong>Thời trang cho bé trai</strong></li>
-                    <li><router-link to="product">Áo phông</router-link></li>
-                    <li><router-link to="product">Áo sơ mi</router-link></li>
-                    <li><router-link to="product">Quần jean</router-link></li>
-                    <li><router-link to="product">Quần kaki</router-link></li>
-                    <li><router-link to="product">Quần short</router-link></li>
-                    <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
-                    <li><router-link to="product">Giầy dép thời trang</router-link></li>
-                  </ul>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                  <div class="product-list">
-                    <router-link to=""><img src="../assets/menu/menu-img3.jpg" alt=""></router-link>
-                  </div>
-                  <ul class="product-list">
-                    <li><router-link to="product"><strong>Thời trang bé gái</strong></router-link></li>
-                    <li><router-link to="product">Áo phông</router-link></li>
-                    <li><router-link to="product">Áo sơ mi</router-link></li>
-                    <li><router-link to="product">Chân váy</router-link></li>
-                    <li><router-link to="product">Chân liền</router-link></li>
-                    <li><router-link to="product">Quần jean</router-link></li>
-                    <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
-                    <li><router-link to="product">Giầy dép thời trang</router-link></li>
-                  </ul>
-                </div>
-
-                <div class="col-sm-3 col-md-3">
-                  <div class="product-list">
-                    <router-link to="product"><img src="../assets/menu/menu-img4.jpg" alt=""></router-link>
-                  </div>
-                  <ul class="product-list">
-                    <li><router-link to="product"><strong>Đồ chơi cho bé</strong></router-link></li>
-                    <li><router-link to="product">Ô tô </router-link></li>
-                    <li><router-link to="product">Xe máy</router-link></li>
-                    <li><router-link to="product">Xe đạp</router-link></li>
-                    <li><router-link to="product">Đồ chơi xếp hình</router-link></li>
-                    <li><router-link to="product">Đồ chơi điều khiển</router-link></li>
-                    <li><router-link to="product">Đồ chơi giáo dục</router-link></li>
-                    <li><router-link to="product">Sách truyện cho bé</router-link></li>
-                  </ul>
-                </div>
-
-              </div>
-              </li>
-
-            <li class="list item4" data-toggle="tooltip"><router-link to="Blog">Blog</router-link>
-
-            </li>
-            <li class="list item5"><router-link to="contact">Liên hệ</router-link></li>
-            <li class="list item6"><router-link to="sale-off">Khuyến mãi</router-link></li>
-            <li>
-              <div class="icon-cart">
-                <router-link to="cart"> 
-                <button class="btn btn-danger">Giỏ hàng  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <span class="couter1">0</span></button>
-                </router-link>
-                <router-link to="favorite"> 
-                <button class="btn btn-info">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <span class="couter2">0</span></button>
-
-                </button>
-                </router-link>
-              <!--   <router-link to=""> <i class="fa fa-search" aria-hidden="true"></i>
-                </router-link> -->
-              </div>
-            </li>
-
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog user-modal">
+          <ul class="nav nav-tabs menu-login">
+            <li class="active"><a data-toggle="tab" href="#login" class="text-center">Đăng nhập</a></li>
+            <li><a data-toggle="tab" href="#register" class="text-center">Đăng ký</a></li>
           </ul>
+          <div class="tab-content">
+            <div id="login" class="tab-pane fade in active">
+              <!-- Modal content-->
+              <div class="modal-content myForm">
 
-        </div>
+                <div class="modal-body">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email-register"
+                      placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" class="form-control" id="password-register"
+                      placeholder="Enter password" name="password">
+                    </div>
+                    <div class="checkbox">
+                      <label class="text-color"><input type="checkbox" name="remember"> Ghi
+                        nhớ tài khoản</label>
+                      </div>
+                      <router-link to="/">
+                        <button  class="btn btn-primary get-sign" data-dismiss="modal">Đăng nhập
+                        </button>
+                      </router-link>
+                      <div class="remember">
+                        <label class="text-color"><i class="fa fa-question-circle-o"
+                          aria-hidden="true"></i>Quên mật khẩu
+                          ?</label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer" id="login-icon">
+                      <div class="col-md-* text-center login-face">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
+                      </div>
+                      <div class="col-md-* text-center login-gmail">
+                        <a href="https://accounts.google.com/signin"><i class="fa fa-google" aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-      </div>
+
+                <div id="register" class="tab-pane fade">
+                  <!-- Modal content-->
+                  <div class="modal-content myForm">
+                    <div class="modal-body ">
+                      <form action="">
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email"
+                          placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password:</label>
+                          <input type="password" class="form-control" id="password"
+                          placeholder="Enter password" name="password">
+                        </div>
+                        <div class="checkbox">
+                          <label class="text-color"><input type="checkbox" name="remember">Hiển thị
+                            mật khẩu</label>
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" class="form-control" id="name"
+                            placeholder="Họ và tên" name="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="text" class="form-control" id="phone"
+                            placeholder="Số điện thoại" name="phone">
+                          </div>
+                          <button type="submit" class="btn btn-primary getsubmit">Đăng ký
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
-    </nav>
-    <!-- end nav desktop-->
-    <!-- nav mobile-->
-    <nav class="navbar navbar-default nav-phone">
-      <button type="button" class="navbar-toggle" id="menu" data-toggle="collapse"
-              data-target="#menu-phone"
-      ><i class="fa fa-bars" aria-hidden="true"></i>
-      </button>
-      <router-link to=""><img src="../assets/logo/thanhlogo.png"></router-link>
+              </div>
+            </div>
+            <!-- nav desktop-->
+            <nav class="navbar navbar-default nav-sm">
+              <div class="container nav-sm-wrap">
+                <div class="col-sm-2 col-md-2 logo">
+                  <router-link to="/"><img src="../assets/logo/thanhlogo.png"></router-link>
+                </div>
+                <div class="col-sm-10 col-md-10 menu">
+                  <ul class="menu--item">
+                    <li class="list item1"><router-link to="/">Trang chủ</router-link></li>
+                    <li class="list item2"><router-link to="introduce">Giới thiệu</router-link ></li>
+                    <li class="list item3 list-item">
+                      <router-link to="" to="product">Sản phẩm<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
 
-      <div class="collapse navbar-collapse" id="menu-phone">
-        <ul class="menu--xs">
-          <li class="list-xs"><router-link to="/">Trang chủ</router-link></li>
-          <li class="list-xs"><router-link to="Introduce">Giới thiệu</router-link></li>
-          <li class="list-xs"><router-link to="product">Sản phẩm</router-link></li>
-          <li class="list-xs"><router-link to="Blog">Blog</router-link></li>
-          <li class="list-xs"><router-link to="Contact">Liên hệ</router-link></li>
-        </ul>
-      </div>
-      <div class="icon-cart-xs">
-       <router-link to="cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-        </router-link>
-        <router-link to="favorite"> <i class="fa fa-heart-o" aria-hidden="true"></i>
-        </router-link>
-        <router-link to="search"> <i class="fa fa-search" aria-hidden="true"></i>
-        </router-link>
-      </div>
-    </nav>
+                      <div class="container product">
+                        <div class="col-sm-3 col-md-3">
+                          <div class="product-list">
+                            <router-link  to="product"><img src="../assets/menu/menu-img1.jpg" alt=""></router-link >
+                            </div>
+                            <ul class="product-list">
+                              <li><router-link to="" to="product">
+                                <strong>Dành cho bé sơ sinh</strong>
+                              </router-link to="product"></li>
+                              <li><router-link to="product">Bỉm và tã giấy</router-link></li>
+                              <li><router-link to="product">Sữa</router-link></li>
+                              <li><router-link to="product">Kem hăm, dưỡng da, phấn rôm</router-link > </li>
+                              <li><router-link to="product">Quần áo sơ sinh</router-link ></li>
+                              <li><router-link to="product">Giường cũi gỗ cho bé</router-link ></li>
+                              <li><router-link to="product">Lôi điện và ghế rung</router-link ></li>
+                              <li></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-md-3">
+                            <div class="product-list">
+                              <router-link to=""><img src="../assets/menu/menu-img2.jpg" alt=""></router-link>
+                            </div>
+                            <ul class="product-list">
+                              <li><strong>Thời trang cho bé trai</strong></li>
+                              <li><router-link to="product">Áo phông</router-link></li>
+                              <li><router-link to="product">Áo sơ mi</router-link></li>
+                              <li><router-link to="product">Quần jean</router-link></li>
+                              <li><router-link to="product">Quần kaki</router-link></li>
+                              <li><router-link to="product">Quần short</router-link></li>
+                              <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
+                              <li><router-link to="product">Giầy dép thời trang</router-link></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-md-3">
+                            <div class="product-list">
+                              <router-link to=""><img src="../assets/menu/menu-img3.jpg" alt=""></router-link>
+                            </div>
+                            <ul class="product-list">
+                              <li><router-link to="product"><strong>Thời trang bé gái</strong></router-link></li>
+                              <li><router-link to="product">Áo phông</router-link></li>
+                              <li><router-link to="product">Áo sơ mi</router-link></li>
+                              <li><router-link to="product">Chân váy</router-link></li>
+                              <li><router-link to="product">Chân liền</router-link></li>
+                              <li><router-link to="product">Quần jean</router-link></li>
+                              <li><router-link to="product">Đồ mặc ở nhà</router-link></li>
+                              <li><router-link to="product">Giầy dép thời trang</router-link></li>
+                            </ul>
+                          </div>
+
+                          <div class="col-sm-3 col-md-3">
+                            <div class="product-list">
+                              <router-link to="product"><img src="../assets/menu/menu-img4.jpg" alt=""></router-link>
+                            </div>
+                            <ul class="product-list">
+                              <li><router-link to="product"><strong>Đồ chơi cho bé</strong></router-link></li>
+                              <li><router-link to="product">Ô tô </router-link></li>
+                              <li><router-link to="product">Xe máy</router-link></li>
+                              <li><router-link to="product">Xe đạp</router-link></li>
+                              <li><router-link to="product">Đồ chơi xếp hình</router-link></li>
+                              <li><router-link to="product">Đồ chơi điều khiển</router-link></li>
+                              <li><router-link to="product">Đồ chơi giáo dục</router-link></li>
+                              <li><router-link to="product">Sách truyện cho bé</router-link></li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </li>
+
+                      <li class="list item4" data-toggle="tooltip"><router-link to="Blog">Blog</router-link>
+
+                      </li>
+                      <li class="list item5"><router-link to="contact">Liên hệ</router-link></li>
+                      <li class="list item6"><router-link to="sale-off">Khuyến mãi</router-link></li>
+                      <li>
+                        <div class="icon-cart">
+                          <router-link to="cart"> 
+                            <button class="btn btn-danger">Giỏ hàng  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                              <span class="couter1">0</span></button>
+                            </router-link>
+                            <router-link to="favorite"> 
+                              <button class="btn btn-info">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <span class="couter2">0</span></button>
+
+                              </button>
+                            </router-link>
+              <!--   <router-link to=""> <i class="fa fa-search" aria-hidden="true"></i>
+            </router-link> -->
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+</nav>
+<!-- end nav desktop-->
+<!-- nav mobile-->
+<nav class="navbar navbar-default nav-phone">
+  <button type="button" class="navbar-toggle" id="menu" data-toggle="collapse"
+  data-target="#menu-phone"
+  ><i class="fa fa-bars" aria-hidden="true"></i>
+</button>
+<router-link to=""><img src="../assets/logo/thanhlogo.png"></router-link>
+
+<div class="collapse navbar-collapse" id="menu-phone">
+  <ul class="menu--xs">
+    <li class="list-xs"><router-link to="/">Trang chủ</router-link></li>
+    <li class="list-xs"><router-link to="Introduce">Giới thiệu</router-link></li>
+    <li class="list-xs"><router-link to="product">Sản phẩm</router-link></li>
+    <li class="list-xs"><router-link to="Blog">Blog</router-link></li>
+    <li class="list-xs"><router-link to="Contact">Liên hệ</router-link></li>
+  </ul>
+</div>
+<div class="icon-cart-xs">
+ <router-link to="cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+ </router-link>
+ <router-link to="favorite"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+ </router-link>
+ <router-link to="search"> <i class="fa fa-search" aria-hidden="true"></i>
+ </router-link>
+</div>
+</nav>
     <!--end nav mobile-->
    <!--  <div class="logged">
       <img src="../assets/avarta.png" alt="" class="img-responsive circle">
@@ -269,16 +277,13 @@
       window.$('[data-toggle="collapse"]').click(function () {
         window.$('#menu-phone').slideDown()
       })
-
-      window.$('.btn-login').css({
-        'background': 'none',
-        'border': 0
+      window.$('.get-sign').click(function () {
+        window.$('.sign-in, .register').css('display', 'none')
+        window.$('.logged').css('display', 'flex')
       })
-      window.$('.logged').css({
-        'margin-right': '50px'
-      })
-      window.$('.dropdown-menu').css({
-        'color': 'black!important'
+      window.$('.sign-out').click(function () {
+        window.$('.sign-in, .register').css('display', 'block')
+        window.$('.logged').css('display', 'none')
       })
     },
     data () {
@@ -292,10 +297,6 @@
       }
     },
     methods: {
-      changeHtml: function () {
-        this.html1 = '<div class="logged"> <img v-bind:src="this.avarta" alt="" class="img-responsive circle"> <div class="dropdown"> <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Bùi Văn Thanh</button> <ul class="dropdown-menu"> <li class="dropdown-text">Quản lý tài khoản</li> <li class="dropdown-text">Đăng xuất</li> </ul> </div> </div>'
-        this.html2 = ''
-      },
       couter: function () {
         this.couter1++
         this.couter2++
@@ -407,6 +408,11 @@
     float: right;
   }
 
+  .btn-login{
+    background: none;
+    border: none;
+  }
+
   .login-item {
     border: none;
     background: none;
@@ -421,7 +427,7 @@
     float: left;
   }
 
-  .getsubmit {
+  .get-sign {
     width: 100%;
   }
 
@@ -451,7 +457,7 @@
     background: #3B5998;
     width: 48%;
     margin-right: 3%;
-    border-radius: 15px;
+    border-radius: 4px;
     margin-bottom: 10px;
   }
 
@@ -459,7 +465,7 @@
     display: block;
     float: left;
     background: #B94937;
-    border-radius: 15px;
+    border-radius: 4px;
     width: 48%;
 
   }
@@ -760,8 +766,6 @@
     .icon-cart a>button{
       padding: 5px 10px;
     }  
-      
-
   }
 
   .list-item{
@@ -876,6 +880,33 @@
     border-top:none;
     border-bottom:4px solid black;
     } */
+
+    .logged{
+      width: 30%;
+      /*height: 34px;*/
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      display: none;
+    }
+
+    .avarta-s{
+      border-radius: 50%;
+    }
+    .dropdown-toggle{
+      background: none;
+      color: white;
+      border:none;
+    }
+    .dropdown-text{
+      color: black;
+      padding: 5px 10px;
+    }
+
+    .sign-out, .user-info{
+      cursor: pointer;
+    }
 
 
 </style>

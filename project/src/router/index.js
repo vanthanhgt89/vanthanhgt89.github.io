@@ -12,6 +12,7 @@ import Cart from '@/components/Cart'
 import ATMBank from '@/components/ATMBank'
 import VisaCard from '@/components/VisaCard'
 import Payment from '@/components/Payment'
+import User from '@/components/User'
 
 Vue.use(Router)
 
@@ -77,6 +78,11 @@ export default new Router({
       path: '/visa-card',
       name: 'VisaCard',
       component: VisaCard
+    },
+    {
+      path: '/user',
+      name: 'User',
+      component: User
     }
   ]
 })

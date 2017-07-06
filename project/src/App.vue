@@ -44,6 +44,7 @@
   import ATMBank from './components/ATMBank'
   import VisaCard from './components/VisaCard'
   import Payment from './components/Payment'
+  import User from './components/User'
   import getFooter from './components/getFooter'
   export default {
     name: 'app',
@@ -83,6 +84,7 @@
       ATMBank,
       VisaCard,
       Payment,
+      User,
       getFooter
     }
 }

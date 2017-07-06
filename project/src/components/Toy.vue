@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row toy">
+
       <div class="box-title">
         <div class="title-left">
           <span class="">Đồ chơi trẻ em</span>
@@ -59,8 +60,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- 
-  
+.toy{
+  margin:0;
+}
  .row .box-title{
   height: 50px;
   line-height: 50px;
@@ -68,12 +70,12 @@
   border-bottom: 2px solid orange;
   text-transform: capitalize;
 }
-
-.title-left{
+ .title-left{
   background: #F08113;
   float: left;
   color: white;
-  padding: 0 10px
+  width: 20%;
+  padding: 0 15px
 }
 
 
@@ -82,14 +84,28 @@
   padding: 0 15px;  
   color: black;
 }
+
 @media (min-width: 1px){
   .title-right{
   padding: 0;  
+  }
+  .title-left{
+    width: 50%;
   }
 }
 @media (min-width: 425px){
   .title-right{
   padding: 0 15px;  
+  }
+}
+@media (min-width: 768px){
+  .title-left{
+    width: 30%;
+  }
+}
+@media (min-width: 992px){
+  .title-left{
+    width: 20%;
   }
 }
 
@@ -118,8 +134,6 @@
   color: black;
   }
 
-
-  
   .container-item-s >img{
     display: block;
     margin: auto;
