@@ -7,10 +7,10 @@
           <ul>
             <li>
               <div class="user">
-                <div class="col-sm-4 img-box">
+                <div class="col-xs-4 col-sm-4 img-box">
                   <img src="../assets/avarta.png" alt="">
                 </div>
-                <div class="col-sm-8 info">
+                <div class="col-xs-8 col-sm-8 info">
                   <h4>Tên tài khoản</h4>
                   <span>Chỉnh sửa tài khoản</span>
                 </div>
@@ -209,7 +209,6 @@
 }
 
 .img-box>img{
-  /*width: 90%;*/
   border: 1px solid rgba(214, 135, 23, 0.8);
   border-radius: 50%;
 
@@ -243,28 +242,18 @@
   transform: translateX(-10px);
   transition: all 0.3s linear;
 }
-
-.list2{
-  padding: 5px 0;
-  transform: translateX(-10px);
-  transition: all 0.3s linear;
-}
-
 .list1:hover{
   transform: translateX(10px);
   color:#F08113;
 }
-.list2:hover{
-  transform: translateX(5px);
-  color: #F08113;
-}
+
 
 h3{
   text-transform: uppercase;
   border-bottom: 2px solid orange;
 }
 
-@media (min-width: 425px){
+@media (min-width: 375px){
   .menu-item{
     display: block;
   }
@@ -389,4 +378,6 @@ label{
   display: block;
   margin: auto;
 }
+
+
 </style>

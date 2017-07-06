@@ -56,7 +56,7 @@
       </div>
     </div>
     </div>
-    
+    <img src="../assets/back-top.png" alt="" class="back-top">
   </footer>
 </template>
 
@@ -210,6 +210,13 @@ export default {
   .list-item{
     text-align: left;
   }
-
+  
+  .back-top{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;height: 60px;
+    display: none;
+  }
 
 </style>

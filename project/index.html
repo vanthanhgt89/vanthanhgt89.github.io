@@ -72,9 +72,22 @@
       couterCart();
 
 
+      $(".back-top").click(function() {
+        $('html,body').animate({
+            scrollTop: 0
+          },'slow');
+        return false;
+    });
 
+      $("#go-about").click(function() {
+        $('html,body').animate({
+            scrollTop: $('#special-product').offset().top
+          },'slow');
+        return false;
+    });
       $(window).scroll(function () {
         let wScroll =	$(this).scrollTop();
+
         
         if(wScroll > 0 && wScroll < 100){
          $('#introduce').typed({
@@ -93,6 +106,12 @@
           strings: ['Trang chủ / Giới thiệu </br>Về Babystore '],
           typeSpeed: 0
          })
+        }
+
+        if(wScroll > 500){
+          $('.back-top').fadeIn('slow');
+        }else{
+          $('.back-top').fadeOut('slow');
         }
 
 

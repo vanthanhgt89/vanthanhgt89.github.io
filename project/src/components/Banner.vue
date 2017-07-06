@@ -9,7 +9,7 @@
         </div>
       </div>
       <div id="go-down">
-        <a href="#about" id="go-about"></a>
+        <a href="#" id="go-about"></a>
       </div>
     </div>
   </div>

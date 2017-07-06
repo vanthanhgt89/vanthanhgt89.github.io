@@ -7,10 +7,10 @@
           <ul>
             <li>
               <div class="user">
-                <div class="col-sm-4 img-box">
+                <div class="col-xs-4 col-sm-4 img-box">
                   <img src="../assets/avarta.png" alt="">
                 </div>
-                <div class="col-sm-8 info">
+                <div class="col-xs-8 col-sm-8 info">
                   <h4>Tên tài khoản</h4>
                   <span>Chỉnh sửa tài khoản</span>
                 </div>

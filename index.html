@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=static/font-awesome-4.7.0/css/font-awesome.min.css><link rel=stylesheet href=static/dist/css/bootstrap.min.css><link rel=stylesheet href=static/bx-slider/jquery.bxslider.min.css><title>Baby Store</title><link href=/static/css/app.b0889353bed0e78ec6f4a4d75a3436b8.css rel=stylesheet></head><body><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=static/jquery/jquery.elevateZoom-3.0.8.min.js></script><script src=static/typed.js-master/js/typed.js></script><script src=static/bx-slider/jquery.bxslider.min.js></script><script src=static/dist/js/bootstrap.min.js></script><script>$(document).ready(function () {
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=static/font-awesome-4.7.0/css/font-awesome.min.css><link rel=stylesheet href=static/dist/css/bootstrap.min.css><link rel=stylesheet href=static/bx-slider/jquery.bxslider.min.css><title>Baby Store</title><link href=/static/css/app.8005922fef666e22498036dc62425a73.css rel=stylesheet></head><body><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=static/jquery/jquery.elevateZoom-3.0.8.min.js></script><script src=static/typed.js-master/js/typed.js></script><script src=static/bx-slider/jquery.bxslider.min.js></script><script src=static/dist/js/bootstrap.min.js></script><script>$(document).ready(function () {
     
 
       $("#zoom_03").elevateZoom({ zoomType  : "inner", cursor: "crosshair" });
@@ -53,9 +53,22 @@
       couterCart();
 
 
+      $(".back-top").click(function() {
+        $('html,body').animate({
+            scrollTop: 0
+          },'slow');
+        return false;
+    });
 
+      $("#go-about").click(function() {
+        $('html,body').animate({
+            scrollTop: $('#special-product').offset().top
+          },'slow');
+        return false;
+    });
       $(window).scroll(function () {
         let wScroll =	$(this).scrollTop();
+
         
         if(wScroll > 0 && wScroll < 100){
          $('#introduce').typed({
@@ -76,6 +89,12 @@
          })
         }
 
+        if(wScroll > 500){
+          $('.back-top').fadeIn('slow');
+        }else{
+          $('.back-top').fadeOut('slow');
+        }
+
 
         let html = $('#about').html();
        if(html){
@@ -92,4 +111,4 @@
        
       })
 
-    })</script><script type=text/javascript src=/static/js/manifest.e7956c3571c29abb1215.js></script><script type=text/javascript src=/static/js/vendor.4f6b0c8f0551c1a61570.js></script><script type=text/javascript src=/static/js/app.d7896543d4e52ce74b42.js></script></body></html>
+    })</script><script type=text/javascript src=/static/js/manifest.f2450bb50da5fc09aaff.js></script><script type=text/javascript src=/static/js/vendor.34f7c3fb3e771f7a2ed5.js></script><script type=text/javascript src=/static/js/app.2169229c4a1d169ef920.js></script></body></html>

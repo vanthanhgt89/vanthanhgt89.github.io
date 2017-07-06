@@ -143,19 +143,23 @@
     mounted () {
       window.$('#slider1').bxSlider({
         slideWidth: 200,
-        minSlides: 1,
+        minSlides: 2,
         maxSlides: 5,
-        slideMargin: 40
+        slideMargin: 40,
+        moveSlides: 3
       })
       window.$('.slider1').bxSlider({
         slideWidth: 200,
-        minSlides: 3,
+        minSlides: 2,
         maxSlides: 5,
         slideMargin: 40
       })
       window.$('.bx-wrapper').css({
         'border': 'none',
         'box-shadow': 'none'
+      })
+      window.$('.bx-pager').css({
+        'display': 'none'
       })
     },
     data () {
