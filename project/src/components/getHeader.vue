@@ -211,8 +211,7 @@
 
                               </button>
                             </router-link>
-              <!--   <router-link to=""> <i class="fa fa-search" aria-hidden="true"></i>
-            </router-link> -->
+              
           </div>
         </li>
 
@@ -252,16 +251,7 @@
 </div>
 </nav>
     <!--end nav mobile-->
-   <!--  <div class="logged">
-      <img src="../assets/avarta.png" alt="" class="img-responsive circle">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Bùi Văn Thanh</button>
-        <ul class="dropdown-menu">
-          <li>Quản lý tài khoản</li>
-          <li>Đăng xuất</li>
-        </ul>
-      </div>
-    </div> -->
+ 
 
 
   </header>
@@ -271,11 +261,8 @@
   export default {
     name: 'getHeader',
     mounted () {
-      window.$('.list-xs').click(function () {
+      window.$('.list-xs').on('click', function () {
         window.$('#menu-phone').slideUp()
-      })
-      window.$('[data-toggle="collapse"]').click(function () {
-        window.$('#menu-phone').slideDown()
       })
       window.$('.get-sign').click(function () {
         window.$('.sign-in, .register').css('display', 'none')
@@ -289,8 +276,6 @@
     data () {
       return {
         list1: ['Dành cho bé sơ sinh', 'Bỉm và tã giấy', 'Sữa', 'Kem hăm dưỡng da và phấn rôm', 'Quần áo sơ sinh', 'Giường và cũi gỗ', 'Lôi diện cho bé'],
-        html1: ' <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</button>',
-        html2: '<button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button>',
         avarta: require('../assets/avarta.png'),
         couter1: 0,
         couter2: 0
@@ -883,14 +868,27 @@
 
     .logged{
       width: 30%;
-      /*height: 34px;*/
       position: absolute;
       top: 0;
       right: 0;
       display: flex;
       display: none;
     }
-
+    @media (min-width: 1px){
+      .logged{
+        right: 88px;
+      }
+    }
+      @media (min-width: 768px){
+      .logged{
+        right: 50px;
+      }
+    }
+    @media (min-width: 992px){
+      .logged{
+        right: 0px;
+      }
+    }
     .avarta-s{
       border-radius: 50%;
     }

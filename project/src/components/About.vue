@@ -21,14 +21,14 @@
         <div class="about-img-item">
           <div class="about-shop">
 
-        <router-link to="product">
-            Mua ngay
-        </router-link>
+            <router-link to="product">
+              Mua ngay
+            </router-link>
 
           </div>
         </div>
       </div>
-     
+      
 
     </div>
   </div>
@@ -182,12 +182,13 @@
 .about-shop >a{
   text-transform: uppercase;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 375px) {
   .about-shop {
     display: none;
   }
 }
+
+
 
 @media (min-width: 992px) {
   .about-shop {
@@ -213,5 +214,16 @@
 
 .btn-detail{
   width: 25%;
+}
+
+@media (min-width: 375px){
+  .btn-detail{
+    width: 29%;
+  }
+}
+@media (min-width: 425px){
+  .btn-detail{
+    width: 29%;
+  }
 }
 </style>

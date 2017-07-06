@@ -41,7 +41,6 @@
 }
 
 .collection-item .badge .material-icons{
-	font-size: 1.2em;
 	transition: all 0.3s linear;
 	opacity:0;
 }
