@@ -23,11 +23,11 @@
       $("#zoom_03").elevateZoom({ zoomType  : "inner", cursor: "crosshair" });
 
         $('.list-item').hover(function() {
-        $('.product').slideDown('slow');
+        $('.product-menu').slideDown('slow');
         $('#introduce').css('visibility','hidden');
        }, function() {
         $(window).click(function(){
-        $('.product').slideUp();
+        $('.product-menu').slideUp();
         $('#introduce').css('visibility','visible');
         })
      });
@@ -82,6 +82,14 @@
           },'slow');
         return false;
     });
+       $('a').click(function() {
+        $('#quickbuy').modal('hide');
+        $('html,body').animate({
+            scrollTop: 0
+          },'slow');
+        return false;
+    });
+
       $(window).scroll(function () {
         let wScroll =	$(this).scrollTop();
 

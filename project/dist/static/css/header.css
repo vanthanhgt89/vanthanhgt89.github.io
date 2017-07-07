@@ -1,0 +1,272 @@
+/*
+=== top-header ===*/
+header {
+    width: 100%;
+    height: auto;
+}
+
+.top-header {
+    background: #F08113;
+    height: 30px;
+    color: white;
+}
+
+.login{
+    float: right!important;
+}
+#icon-phone, #icon-email {
+    margin-left: 15px;
+    line-height: 30px;
+}
+
+#icon-email  , #icon-phone{
+    display: none;
+}
+
+.login-item {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    #icon-email ,  #icon-phone {
+        display: inline-block;
+    }
+
+    #icon-phone, #icon-email {
+        margin-left: 15px;
+        line-height: 30px;
+    }
+
+}
+
+/*=== form register ===*/
+.user-modal {
+    width: 300px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .user-modal {
+        width: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .user-modal {
+        width: 400px;
+    }
+
+}
+
+#myModal {
+    transform: translateY(50px);
+    box-shadow: none;
+}
+
+#myModal > div > ul {
+    border: none;
+}
+
+#myModal > div > ul > li {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: #666666;
+}
+
+#myModal > div > ul > li > a {
+    border: none;
+    border-radius: 0;
+    color: black;
+    margin: 0;
+}
+
+#email, #password {
+    background: #FAFFBD;
+}
+
+.menu-login > li {
+    width: 50%;
+}
+
+.login {
+    float: right;
+}
+
+.login-item {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.login-item:hover {
+    background: white;
+}
+
+.getsubmit {
+    width: 100%;
+}
+
+.text-color {
+    color: #00695C;
+    display: block;
+    text-align: left;
+}
+
+.remember {
+    margin: 10px 0;
+}
+
+.fa-google,
+.fa-facebook-official {
+    color: white;
+    font-size: 2em;
+}
+
+#login-icon {
+    justify-content: center;
+}
+
+.login-face {
+    background: #3B5998;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-gmail {
+    background: #B94937;
+    border-radius: 5px;
+}
+
+.myNavbar {
+    height: 80px;
+    background: white;
+}
+
+.myNavbar .menu-xs {
+    position: relative;
+    height: 80px;
+}
+
+#menu {
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    margin-bottom: 0;
+    padding: 0;
+    background:none;
+    border:none;
+}
+
+#logo-phone {
+    width: 100%;
+    height: 80px;
+   display: flex;
+}
+@media (min-width: 728px ) {
+    #logo-phone{
+        display: none;
+    }
+}
+
+#logo-phone > img {
+    display: block;
+    width: 35%;
+    margin: auto;
+}
+@media (min-width: 375px ) {
+    #logo-phone > img {
+        width: 31%;
+    }
+}
+
+@media (min-width: 425px ) {
+    #logo-phone > img {
+        width: 28%;
+    }
+}
+
+.icon-cart {
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+@media (min-width: 768px ) {
+    .icon-cart {
+        font-size: 17px;
+        position: absolute;
+        bottom: 0;
+        top: 30px;
+        right: 5px;
+    }
+}
+@media (min-width: 992px ) {
+    .icon-cart {
+        font-size: 25px;
+        position: absolute;
+        bottom: 0;
+        top: 20px;
+        right: 5px;
+        margin-right:10px
+
+    }
+}
+
+
+.cart, .heart, .search {
+    color: black;
+}
+/*style menu*/
+#menu-phone {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border: 1px solid;
+    width: 40%;
+}
+@media (min-width: 768px) {
+    #menu-phone {
+        width: 80%;
+        position: absolute;
+        top: 15px;
+        left: 10%;
+        border: none;
+    }
+}
+    #menu-phone > ul > li {
+        text-transform: uppercase;
+        padding: 0;
+    }
+
+    #menu-phone > ul > li > a {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    #logo-sm {
+        width: 14%;
+    }
+
+    /*logo screen deskstop*/
+    #logo-sm > a > img {
+        width: 35%;
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        #logo-sm > a > img {
+            width: 100%;
+            display: block;
+        }
+    }
+    @media (min-width: 992px) {
+        #logo-sm > a > img {
+            width: 90%;
+        }
+    }
+
+

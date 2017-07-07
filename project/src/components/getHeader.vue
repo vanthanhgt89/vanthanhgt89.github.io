@@ -126,7 +126,7 @@
                     <li class="list item3 list-item">
                       <router-link to="" to="product">Sản phẩm<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
 
-                      <div class="container product">
+                      <div class="container product-menu">
                         <div class="col-sm-3 col-md-3">
                           <div class="product-list">
                             <router-link  to="product"><img src="../assets/menu/menu-img1.jpg" alt=""></router-link >
@@ -495,7 +495,7 @@
       margin-bottom: 0;
     }
   }
-  .product{
+  .product-menu{
     position: absolute;
     display: none;
     top: 65px;
@@ -505,18 +505,18 @@
     background: white;
   }
   @media (min-width: 768px) {
-    .product{
+    .product-menu{
       left: -272px;
     }
   }
 
   @media (min-width: 992px) {
-    .product{
+    .product-menu{
       left: -350px;
     }
   }
   @media (min-width: 1170px) {
-    .product{
+    .product-menu{
       left: -500px;
     }
   }

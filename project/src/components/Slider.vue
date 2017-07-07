@@ -19,19 +19,16 @@
         </div>
       </div>
       <div class="info">
-        <div class="title">
-            <router-link to="">{{item.name}}</router-link>
-          </div>
-          <div class="price">
-            <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
-            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link>
-          </div>
-      </div>
-      <div class="cart-s">
-        <button class="btn btn-info couter-heart">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i></button>
-        <button class="btn btn-danger couter-cart" data-toggle="modal" data-target="#quickbuy">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+       <div class="info">
+        <a href="" class="name">Ô tô robot biến hình</a>
+        <a href="" class="price">450.000 VND </a>
       </div>
     </div>
+    <div class="cart-s">
+      <button class="btn btn-info couter-heart">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i></button>
+      <button class="btn btn-danger couter-cart" data-toggle="modal" data-target="#quickbuy">Mua hàng <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+    </div>
+  </div>
 
 
 
@@ -39,7 +36,6 @@
 </template>
 
 <script>
-// import QuickBuy from '../components/QuickBuy'
   export default {
     name: 'Slider',
     data () {
@@ -51,9 +47,6 @@
         ]
       }
     }
-    // components: {
-    //   QuickBuy
-    // }
   }
 </script>
 
