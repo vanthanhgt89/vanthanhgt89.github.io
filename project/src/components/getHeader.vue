@@ -261,9 +261,6 @@
   export default {
     name: 'getHeader',
     mounted () {
-      window.$('.list-xs').on('click', function () {
-        window.$('#menu-phone').slideUp()
-      })
       window.$('.get-sign').click(function () {
         window.$('.sign-in, .register').css('display', 'none')
         window.$('.logged').css('display', 'flex')
@@ -311,9 +308,17 @@
   }
 
   @media (min-width: 1px) {
-    .menu__info--item1 > span:last-child {
+    .menu__info--item1{
       display: none;
     }
+  }
+   @media (min-width: 375px) {
+    .menu__info--item1{
+      display: inline-block;
+    }
+     .menu__info--item1 > span:last-child {
+    display: none;
+  }
   }
 
   @media (min-width: 768px) {
@@ -326,6 +331,23 @@
     height: 30px;
     color: white;
   }
+
+    @media (min-width: 1px) {
+    .menu__info--item2{
+      width: 100%;
+    }
+  }
+    @media (min-width: 375px) {
+    .menu__info--item2{
+      width: 58% ;
+    }
+  }
+    @media (min-width: 768px) {
+    .menu__info--item2{
+      width: 50% ;
+    }
+  }
+
   .sign-in, .register{
     float: right;
     line-height: 30px;

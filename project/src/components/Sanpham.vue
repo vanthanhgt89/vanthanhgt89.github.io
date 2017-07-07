@@ -361,7 +361,7 @@
 
 
 #search{
-  width: 85%;
+  width: 83%;
   height: 30px;
   font-size: 0.8em;
   border: 1px solid #204d74;
@@ -395,7 +395,7 @@
 .menu{
   height: 30px;
   padding: 0 5px;
-  background: red;
+  background: #F08113;
   color: white;
   font-size: 1.1em;
   text-transform: uppercase;
@@ -434,7 +434,7 @@
     justify-content: center;
   }
 
-  @media (min-width:425px){
+  @media (min-width:1px){
     .menu{
       display: none;
     }

@@ -201,21 +201,19 @@
 
    @media (min-width: 1px) {
     .banner {
-      background-size: contain;
+      background-size: cover;
       height: 155px;
     }
   }
 
   @media (min-width: 425px) {
     .banner {
-      background-size: contain;
       height: 155px;
     }
   }
 
   @media (min-width: 768px) {
     .banner {
-      background-size: contain;
       height: 280px;
 
     }
@@ -223,7 +221,6 @@
 
   @media (min-width: 992px) {
     .banner {
-      background-size: contain;
       height: 375px;
 
     }
@@ -231,7 +228,6 @@
 
   @media (min-width: 1200px) {
     .banner {
-      background-size: cover;
       height: 500px;
     }
   }
@@ -519,7 +515,7 @@
 .service-box:hover {
   color: #F08113;
 }
-@media (min-width: 425px){
+@media (min-width: 1px){
   .menu-item{
     display: block;
   }

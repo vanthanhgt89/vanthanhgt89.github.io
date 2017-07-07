@@ -16,16 +16,16 @@
     </div>
     <div class="container footer">
       <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-        <h4 class="title-footer">Thời gian mở cửa</h4>
-        <ul>
-          <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
-          <li>Thứ 7, CN: 9AM - 8PM</li>
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3 list-item">
+        <div class="col-xs-6 col-sm-3 col-md-3 list-item">
+          <h4 class="title-footer">Thời gian mở cửa</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7, CN: 9AM - 8PM</li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3 list-item">
          <h4 class="title-footer"><router-link to="introduce">Giới thiệu</router-link></h4>
-        <ul>
+         <ul>
           <li><router-link to="introduce">Về chúng tôi</router-link></li>
           <li><router-link to="introduce">Hệ thống cửa hàng</router-link></li>
           <li><router-link to="sale-off">Khuyến mãi</router-link></li>
@@ -34,41 +34,41 @@
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4 class="title-footer"><router-link to="">Hướng dẫn hỗ trợ</router-link></h4>
-        <ul>
-          <li>Hướng dẫn mua hàng</li>
-          <li>Vận chuyển - giao hàng</li>
-          <li>Phương thức thanh toán</li>
-          <li>Sử dụng mã giảm giá</li>
-          <li>Hướng dẫn tạo tài khoản</li>
-          <li>Phương thức đổi trả hàng</li>
-        </ul>
-      </div>
-       <div class="col-xs-6 col-sm-3 col-md-3 list-item">
-         <h4 class="title-footer">Chính sách mua hàng</h4>
-        <ul>
-          <li>Chính sách tích điểm</li>
-          <li>Chính sách bán sỉ</li>
-          <li>Chính sách bảo hành</li>
-          <li>Bảo mật thông tin</li>
-          <li>Sử dụng thông tin</li>
-        </ul>
-      </div>
+       <h4 class="title-footer"><router-link to="">Hướng dẫn hỗ trợ</router-link></h4>
+       <ul>
+        <li>Hướng dẫn mua hàng</li>
+        <li>Vận chuyển - giao hàng</li>
+        <li>Phương thức thanh toán</li>
+        <li>Sử dụng mã giảm giá</li>
+        <li>Hướng dẫn tạo tài khoản</li>
+        <li>Phương thức đổi trả hàng</li>
+      </ul>
     </div>
-    </div>
-    <img src="../assets/back-top.png" alt="" class="back-top">
-  </footer>
+    <div class="col-xs-6 col-sm-3 col-md-3 list-item">
+     <h4 class="title-footer">Chính sách mua hàng</h4>
+     <ul>
+      <li>Chính sách tích điểm</li>
+      <li>Chính sách bán sỉ</li>
+      <li>Chính sách bảo hành</li>
+      <li>Bảo mật thông tin</li>
+      <li>Sử dụng thông tin</li>
+    </ul>
+  </div>
+</div>
+</div>
+<img src="../assets/back-top.png" alt="" class="back-top">
+</footer>
 </template>
 
 <script>
-export default {
-  name: 'getFooter',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'getFooter',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -107,15 +107,13 @@ export default {
     color: orange;
   }
   input{
-    position: relative;
-    width: 30%;
+    width: 40%;
     padding: 10px;
   }
 
   button{
-    position: absolute;
+    display: inline-block;
     padding: 8px;
-    left: 59%;
     background: #155b98;
   }
 
@@ -124,8 +122,6 @@ export default {
     margin-top:10px;
     text-indent: 15px;
     text-align: center;
-    position: absolute;
-    left: 40%;
     display: flex;
     justify-content: center;
   }
@@ -134,62 +130,54 @@ export default {
     font-size: 2.5em;
   }
 
-
-   @media (min-width: 375px){
+  @media (min-width: 1px){
     input{
-      width: 60%;
-      left: -32px;
       font-size: 0.8em;
+      width: 40%;
     }
     button{
-      left: 66%;
       font-size: 0.8em;
     }
-
-    .icon{
-      left: 21%;
-    }
-
     .title-footer{
       font-size: 0.8em;
-      font-weight: 600;
       border-bottom: 1px solid orange;
     }
-  }
 
-  @media (min-width: 425px){
+    .title >h1{
+      font-size: 1.4em;
+    }
+
+    .icon .fa::before{
+      display: block;
+      font-size: 1.6em;
+    }
+  } 
+
+
+  @media (min-width: 768px){
     input{
-      width: 50%;
-      left: -30px;
+      width: 30%;
       font-size: 0.8em;
     }
     button{
-      left: 60%;
       font-size: 0.8em;
     }
 
-    .icon{
-      left: 22%;
+    .icon .fa::before{
+      display: block;
+      font-size: 2em;
+    }
+     .title >h1{
+      font-size: 2em;
+    }
+    .title-footer{
+      font-size: 0.8em;
+      font-weight: bold;
+      border-bottom: 1px solid orange;
     }
 
-   
   }
 
-    @media (min-width: 768px){
-     input{
-      width: 30%;
-      left: 0px;
-      font-size: 1em;
-    }
-     button{
-      left: 59%;
-      font-size: 1em;
-    }
-
-      .icon{
-      left: 40%;
-    }
-  }
 
   .fa-facebook-official{
     color: #3B5998;

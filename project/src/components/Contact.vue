@@ -103,6 +103,28 @@
     text-transform: uppercase;
     color: #F08113;
   }
+  @media (min-width: 1px){
+    .title-contact{
+      width: 70%;
+    }
+  }
+  @media (min-width: 425px){
+  .title-contact{
+    width: 55%;
+  }
+}
+
+@media (min-width: 768px){
+  .title-contact{
+    width: 40%;
+  }
+}
+
+@media (min-width: 992px){
+  .title-contact{
+    width: 30%;
+  }
+}
 
   
   .contact{
@@ -145,23 +167,6 @@
   }
 
 
-@media (min-width: 425px){
-  .title-contact{
-    width: 55%;
-  }
-}
-
-@media (min-width: 768px){
-  .title-contact{
-    width: 35%;
-  }
-}
-
-@media (min-width: 992px){
-  .title-contact{
-    width: 25%;
-  }
-}
 
 
 </style>

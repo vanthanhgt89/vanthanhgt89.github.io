@@ -161,9 +161,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .blog-content{
-    background: rgba(85, 85, 85, 0.18);
-  }
+ 
  .banner {
   position: relative;
   display: flex;
@@ -314,7 +312,7 @@
 }
 
 .nav-title{
-  color: rgba(51, 122, 183, 0.88);
+  color: #F08113;
   margin-top: 20px;
   text-transform: uppercase;
 }
@@ -334,7 +332,7 @@
 }
 
 .title{
-  color: rgba(51, 122, 183, 1);
+  color: #F08113;
   margin: 20px 0 ;
   border-top: 1px solid;
   border-bottom: 4px double;
@@ -344,13 +342,9 @@
   padding: 5px 0;
 }
 
-.list1{
+.list1, .list2{
   padding: 10px 0;
-}
-
-.list2{
-  padding: 10px 0;
-
+  cursor: pointer;
 }
 
 .container-item{
@@ -377,23 +371,24 @@
   padding: 10px;
   width: 80%;
   margin:-30px auto 0 auto;
-  background: white;
+  background: rgba(221, 221, 221, 0.6);
   text-align: left;
-
+  cursor: pointer;
 }
 .text-right{
   width: 80%;
   padding: 10px;
   margin: auto;
   margin:-30px auto 0 auto;
-  background: white;
+  background: rgba(221, 221, 221, 0.6);
   text-align: left;
+  cursor: pointer;
 
 }
 
 .title-blog{
  font-weight: bold;
- color: rgba(51, 122, 183, 0.88);
+ color: #F08113;
 }
 
 
@@ -404,7 +399,7 @@
   justify-content: center;
 }
 
-@media (min-width: 425px){
+@media (min-width: 1px){
   .menu-item{
     display: block;
   }
