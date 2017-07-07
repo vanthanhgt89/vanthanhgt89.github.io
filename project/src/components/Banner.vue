@@ -85,12 +85,14 @@ export default {
   @media (min-width: 1px) {
     #go-down {
       bottom: -10px;
+      display: none;
     }
   }
 
   @media (min-width: 768px) {
     #go-down {
       bottom: -22px;
+      display: block;
     }
   }
 
@@ -173,6 +175,17 @@ export default {
     }
 
     .shop-button > a {
+      padding: 8px 13px;
+      font-size: 0.8em;
+    }
+  }
+  @media (min-width: 425px) {
+    .shop-button {
+      width: 80%;
+      height: 29px;
+    }
+
+    .shop-button > a {
       padding: 8px 20px;
       font-size: 0.8em;
     }
@@ -217,7 +230,14 @@ export default {
 
   @media (min-width: 1px) {
     #introduce {
+      font-size: 0.6em;
+      width: 70%;
+    }
+  }
+   @media (min-width: 425px) {
+    #introduce {
       font-size: 0.8em;
+      width: 60%;
     }
   }
 

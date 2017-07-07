@@ -105,15 +105,19 @@
 
 @media (min-width: 1px){
   .title-right{
-  padding: 0;  
+    display: none;
   }
   .title-left{
-    width: 50%;
+    width: 70%;
   }
 }
 @media (min-width: 425px){
   .title-right{
+    display: block;
   padding: 0 15px;  
+  }
+   .title-left{
+    width: 50%;
   }
 }
 @media (min-width: 768px){

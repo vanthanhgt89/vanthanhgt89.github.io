@@ -5,7 +5,7 @@
       <h1 class="about-title text-center">Chúng tôi có gì?</h1>
 
       <p>Xuất phát từ tình yêu dành cho các bé thơ, sự cảm thông và chia sẻ với các mẹ trong suốt
-        thời kỳ mang bầu và chăm sóc em bé, Hệ thống các cửa hàng <strong style="color:orange">Bibo Store</strong> đã ra đời với mong muốn
+        thời kỳ mang bầu và chăm sóc em bé, Hệ thống các cửa hàng <strong style="color:orange">Baby Store</strong> đã ra đời với mong muốn
         đem đến một thế giới tiện ích cho các mẹ nơi các mẹ có thể mua sắm cho con yêu những sản phẩm an toàn,
         thuận tiện, đẹp mắt, nhanh chóng ...
       </p>
@@ -127,34 +127,39 @@
 
 @media (min-width: 1px) {
   .about-img-large {
-    height: 198px;
+    height: 156px;
+  }
+}
+@media (min-width: 375px) {
+  .about-img-large {
+    height: 189px;
   }
 }
 
 @media (min-width: 425px) {
   .about-img-large {
-    height: 232px;
+    height: 219px;
   }
 }
 
 
 @media (min-width: 768px) {
   .about-img-large {
-    height: 203px;
+    height: 201px;
     background-size: 32%;
   }
 }
 
 @media (min-width: 992px) {
   .about-img-large {
-    height: 269px;
+    height: 264px;
     background-size: contain;
   }
 }
 
 @media (min-width: 1170px) {
   .about-img-large {
-    height: 331px;
+    height: 324px;
     background-size: initial;
   }
 }
@@ -182,19 +187,12 @@
 .about-shop >a{
   text-transform: uppercase;
 }
-@media (min-width: 375px) {
+@media (min-width: 1px) {
   .about-shop {
     display: none;
   }
 }
 
-
-
-@media (min-width: 992px) {
-  .about-shop {
-    display: flex;
-  }
-}
 
 .about-shop:hover {
   border: 2px solid black;
@@ -215,7 +213,11 @@
 .btn-detail{
   width: 25%;
 }
-
+@media (min-width: 1px){
+  .btn-detail{
+    width: 35%;
+  }
+}
 @media (min-width: 375px){
   .btn-detail{
     width: 29%;

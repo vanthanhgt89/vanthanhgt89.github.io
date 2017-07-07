@@ -285,7 +285,7 @@
     display: none;
   }
   .title-text {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
 
