@@ -3,11 +3,14 @@
 		getData: function () {
 			if (typeof(Storage) !== "undefined") {
 				var data;
+
 				try{
 					data = JSON.parse(localStorage.getItem('list')) || {};
-				}catch(error){
+					
+				}catch(e){
 					data = {};
 				}
+				return data;
 			} else {
 				alert('Sorry! No wed localStorage support..')
 				return {};

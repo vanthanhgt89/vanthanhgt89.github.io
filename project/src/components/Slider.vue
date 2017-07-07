@@ -19,8 +19,13 @@
         </div>
       </div>
       <div class="info">
-        <a href="" class="name">Ô tô robot biến hình</a>
-        <a href="" class="price">450.000 VND </a>
+        <div class="title">
+            <router-link to="">{{item.name}}</router-link>
+          </div>
+          <div class="price">
+            <router-link to="detail-product"><ins>{{item.price}}</ins></router-link>
+            <router-link to="detail-product"><del>{{item.priceDel}}</del></router-link>
+          </div>
       </div>
       <div class="cart-s">
         <button class="btn btn-info couter-heart">Yêu thích <i class="fa fa-heart-o" aria-hidden="true"></i></button>
