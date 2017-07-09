@@ -11,7 +11,7 @@
           <button  class="btn-login" data-toggle="modal" data-target="#myModal"> Đăng ký</button>
         </div>
         <div class="sign-in" >
-          <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</button>
+          <button class="btn-login" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</button>
         </div>
         <div class="logged"> 
           <img src="../assets/avarta-s.png" alt="" class="img-responsive avarta-s"> 
@@ -144,6 +144,8 @@
                               <li></li>
                             </ul>
                           </div>
+
+
                           <div class="col-sm-3 col-md-3">
                             <div class="product-list">
                               <router-link to=""><img src="../assets/menu/menu-img2.jpg" alt=""></router-link>
@@ -159,6 +161,8 @@
                               <li><router-link to="product">Giầy dép thời trang</router-link></li>
                             </ul>
                           </div>
+
+                          
                           <div class="col-sm-3 col-md-3">
                             <div class="product-list">
                               <router-link to=""><img src="../assets/menu/menu-img3.jpg" alt=""></router-link>
@@ -414,11 +418,15 @@
   .login {
     float: right;
   }
-
+  .btn-login:focus{
+    outline: none;
+  }
   .btn-login{
     background: none;
     border: none;
   }
+
+ 
 
   .login-item {
     border: none;
@@ -495,58 +503,8 @@
       margin-bottom: 0;
     }
   }
-  .product-menu{
-    position: absolute;
-    display: none;
-    top: 65px;
-    left: -500px;
-    height: 300px;
-    z-index: 999;
-    background: white;
-  }
-  @media (min-width: 768px) {
-    .product-menu{
-      left: -272px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .product-menu{
-      left: -350px;
-    }
-  }
-  @media (min-width: 1170px) {
-    .product-menu{
-      left: -500px;
-    }
-  }
 
  
-  .product-list{
-    width:100%;
-  }
- /* div.product-list{
-    margin-top:15px;
-  }*/
-  .product-list >a >img{
-    display: block;
-    width: 50%;
-    /*margin:auto;*/
-    height: 80px;
-  }
-
-  .product-list >li{
-    width: 100%;
-    height: 20px;
-    text-align: left;
-  }
-  .product-list >li >a{
-    font-size:0.8em!important;
-    line-height: 20px;
-  }
-  .product-list >li >a:hover{
-    color: orange;
-  }
 
   .logo > a > img {
     display: inline-block;
@@ -672,6 +630,75 @@
 
     }
   }
+
+   .product-menu{
+    position: absolute;
+    top: 65px;
+    left: -500px;
+    height: 275px;
+    background: white;
+    transform: translateY(15px);
+    transition: all 0.3s linear;
+    opacity:0;
+  }
+  @media (min-width: 768px) {
+    .product-menu{
+      left: -272px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .product-menu{
+      left: -350px;
+    }
+  }
+  @media (min-width: 1170px) {
+    .product-menu{
+      left: -430px;
+    }
+  }
+
+  .list-item:hover .product-menu{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .product-list >a >img{
+    display: block;
+    width: 50%;
+    height: 80px;
+  }
+
+  .product-list >li{
+    width: 100%;
+    height: 20px;
+    text-align: left;
+  }
+  .product-list >li >a{
+    font-size:0.8em!important;
+    line-height: 20px;
+  }
+  .product-list >li >a:hover{
+    color: orange;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .item4{
     position: relative;
     left: -30px;
@@ -775,18 +802,9 @@
     }  
   }
 
-  .list-item{
-    position: relative;
-  }
+ 
 
-  .list-product{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height:300px;
-    border: 1px solid black;
-  }
+ 
 
   .menu--item .icon-cart {
     float: right;
@@ -927,6 +945,8 @@
     .sign-out, .user-info{
       cursor: pointer;
     }
+
+
 
 
 </style>

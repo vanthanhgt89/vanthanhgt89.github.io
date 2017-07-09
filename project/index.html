@@ -23,13 +23,11 @@
       $("#zoom_03").elevateZoom({ zoomType  : "inner", cursor: "crosshair" });
 
         $('.list-item').hover(function() {
-        $('.product-menu').slideDown('slow');
         $('#introduce').css('visibility','hidden');
+        $('.shop-button').css('visibility','hidden')
        }, function() {
-        $(window).click(function(){
-        $('.product-menu').slideUp();
         $('#introduce').css('visibility','visible');
-        })
+        $('.shop-button').css('visibility','visible')
      });
         
       $('.container-item1').hover(function(){
@@ -78,16 +76,15 @@
 
       $("#go-about").click(function() {
         $('html,body').animate({
-            scrollTop: $('#special-product').offset().top
+            scrollTop: 1000
           },'slow');
         return false;
     });
-       $('a').click(function() {
+       $('.btn-payment').click(function() {
         $('#quickbuy').modal('hide');
         $('html,body').animate({
             scrollTop: 0
           },'slow');
-        return false;
     });
 
       $(window).scroll(function () {

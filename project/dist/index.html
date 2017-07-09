@@ -1,16 +1,14 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=static/font-awesome-4.7.0/css/font-awesome.min.css><link rel=stylesheet href=static/dist/css/bootstrap.min.css><link rel=stylesheet href=static/bx-slider/jquery.bxslider.min.css><title>Baby Store</title><link href=/static/css/app.aedc3dc4ab55d2c14b2f7f9ad4d8198b.css rel=stylesheet></head><body><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=static/jquery/jquery.elevateZoom-3.0.8.min.js></script><script src=static/typed.js-master/js/typed.js></script><script src=static/bx-slider/jquery.bxslider.min.js></script><script src=static/dist/js/bootstrap.min.js></script><script>$(document).ready(function () {
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=static/font-awesome-4.7.0/css/font-awesome.min.css><link rel=stylesheet href=static/dist/css/bootstrap.min.css><link rel=stylesheet href=static/bx-slider/jquery.bxslider.min.css><title>Baby Store</title><link href=/static/css/app.8a2d767763bf5b524cff551e7ddf9497.css rel=stylesheet></head><body><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=static/jquery/jquery.elevateZoom-3.0.8.min.js></script><script src=static/typed.js-master/js/typed.js></script><script src=static/bx-slider/jquery.bxslider.min.js></script><script src=static/dist/js/bootstrap.min.js></script><script>$(document).ready(function () {
     
 
       $("#zoom_03").elevateZoom({ zoomType  : "inner", cursor: "crosshair" });
 
         $('.list-item').hover(function() {
-        $('.product-menu').slideDown('slow');
         $('#introduce').css('visibility','hidden');
+        $('.shop-button').css('visibility','hidden')
        }, function() {
-        $(window).click(function(){
-        $('.product-menu').slideUp();
         $('#introduce').css('visibility','visible');
-        })
+        $('.shop-button').css('visibility','visible')
      });
         
       $('.container-item1').hover(function(){
@@ -59,16 +57,15 @@
 
       $("#go-about").click(function() {
         $('html,body').animate({
-            scrollTop: $('#special-product').offset().top
+            scrollTop: 1000
           },'slow');
         return false;
     });
-       $('a').click(function() {
+       $('.btn-payment').click(function() {
         $('#quickbuy').modal('hide');
         $('html,body').animate({
             scrollTop: 0
           },'slow');
-        return false;
     });
 
       $(window).scroll(function () {
@@ -116,4 +113,4 @@
        
       })
 
-    })</script><script type=text/javascript src=/static/js/manifest.9a3778697daea4cf439f.js></script><script type=text/javascript src=/static/js/vendor.34f7c3fb3e771f7a2ed5.js></script><script type=text/javascript src=/static/js/app.3ee2b5a12a74044e810b.js></script></body></html>
+    })</script><script type=text/javascript src=/static/js/manifest.4c4eca1a0245d167f2ce.js></script><script type=text/javascript src=/static/js/vendor.34f7c3fb3e771f7a2ed5.js></script><script type=text/javascript src=/static/js/app.d006297ebc47e3e5e81e.js></script></body></html>

@@ -37,10 +37,10 @@
             <input type="text" class="form-control adress" placeholder="Địa chỉ">
          
             <router-link to="atm-bank">
-            <button class="btn btn-basic" data-dismiss="modal" >Dùng thẻ ATM có internet Banking</button>
+            <button class="btn btn-basic btn-payment" data-dismiss="modal" >Dùng thẻ ATM có internet Banking</button>
             </router-link>
             <router-link to="visa-card">
-            <button class="btn btn-primary" data-dismiss="modal"  >Dùng thẻ Visa, Master
+            <button class="btn btn-primary btn-payment" data-dismiss="modal"  >Dùng thẻ Visa, Master
             </button></router-link>
           </form>
         </div>

@@ -4,7 +4,8 @@
       <div class="title">
         <h1>Đăng ký nhận tin</h1>
         <form action="">
-          <input type="text" placeholder="Email của bạn"><button type="submit">Submit <i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+          <input type="text" placeholder="Email của bạn">
+          <button type="submit" class="btn-submit">Submit <i class="fa fa-envelope-o" aria-hidden="true"></i></button>
         </form>
         <div class="icon">
           <i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -177,18 +178,20 @@
     }
 
   }
+  .fa-facebook-official, .fa-google-plus-official, .fa-twitter-square, .fa-youtube-play{
+    color: white;
+  }
 
-
-  .fa-facebook-official{
+  .fa-facebook-official:hover{
     color: #3B5998;
   }
-  .fa-google-plus-official{
+  .fa-google-plus-official:hover{
     color: #CA3725;
   }
-  .fa-twitter-square{
+  .fa-twitter-square:hover{
     color: #1EA1F3;
   }
-  .fa-youtube-play{
+  .fa-youtube-play:hover{
     color: #E72B20; 
   }
   
@@ -205,6 +208,9 @@
     right: 40px;
     width: 60px;height: 60px;
     display: none;
+  }
+  .btn-submit{
+    color: white;
   }
 
 </style>

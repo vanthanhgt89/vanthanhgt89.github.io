@@ -5,7 +5,7 @@
       </div>
       <div id='shop'>
         <div class="shop-button">
-          <a href="" class="shop">Mua ngay</a>
+          <router-link to="product" class="shop">Xem chi tiết</router-link>
         </div>
       </div>
       <div id="go-down">
@@ -220,7 +220,8 @@ export default {
   }
 
   #introduce {
-    width: 55%;
+    background:rgba(157, 157, 157, 0.28);
+    width: 55%;;
     font-family: "Courgette", cursive;
     font-size: 2em;
     color: white;

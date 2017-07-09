@@ -19,8 +19,8 @@
       <div class="tab-content tab1">
 
         <div id="item1" class="tab-pane fade in active">
-          <div id="slider1">
-            <div class="slide" v-for="item in specialImg">
+          <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2" v-for="item in specialImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
               <router-link to="detail-product" class="name"> {{item.name}}</router-link>
@@ -42,8 +42,8 @@
 
 
          <div id="item2" class="tab-pane fade">
-          <div class="slider1">
-            <div class="slide" v-for="item in sosinhImg">
+          <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2" v-for="item in sosinhImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
               <router-link to="detail-product" class="name"> {{item.name}}</router-link>
@@ -65,8 +65,8 @@
 
 
          <div id="item3" class="tab-pane fade">
-          <div class="slider1">
-            <div class="slide" v-for="item in boyImg">
+          <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2" v-for="item in boyImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
               <router-link to="detail-product" class="name"> {{item.name}}</router-link>
@@ -87,8 +87,8 @@
         </div> <!-- end item3 -->
 
          <div id="item4" class="tab-pane fade">
-          <div class="slider1">
-            <div class="slide" v-for="item in girlImg">
+          <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2" v-for="item in girlImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
               <router-link to="detail-product" class="name"> {{item.name}}</router-link>
@@ -109,8 +109,8 @@
         </div> <!-- end item4 -->
 
          <div id="item5" class="tab-pane fade">
-          <div class="slider1">
-            <div class="slide" v-for="item in toyImg">
+          <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2" v-for="item in toyImg">
                <div class="container-item">
               <img v-bind:src="item.src" alt="item.name" class="img-responsive">
               <router-link to="detail-product" class="name"> {{item.name}}</router-link>
@@ -140,28 +140,6 @@
 <script>
   export default {
     name: 'specialProduct',
-    mounted () {
-      window.$('#slider1').bxSlider({
-        slideWidth: 200,
-        minSlides: 2,
-        maxSlides: 5,
-        slideMargin: 40,
-        moveSlides: 3
-      })
-      window.$('.slider1').bxSlider({
-        slideWidth: 200,
-        minSlides: 2,
-        maxSlides: 5,
-        slideMargin: 40
-      })
-      window.$('.bx-wrapper').css({
-        'border': 'none',
-        'box-shadow': 'none'
-      })
-      window.$('.bx-pager').css({
-        'display': 'none'
-      })
-    },
     data () {
       return {
         tagStatus: ['tag-left', 'tag-right'],
@@ -205,33 +183,10 @@
           status: 'new'
         },
         {
-          src: require('../assets/topsale/b-topsale3.jpg'),
-          name: 'Áo thun ngắn tay',
-          price: '149.000 đ',
-          status: 'sale',
-          salePercent: '10%'
-        }, {
-          src: require('../assets/topsale/b-topsale2.jpg'),
-          name: 'Áo thun ngắn tay',
-          price: '149.000 đ',
-          status: 'sale',
-          salePercent: '15%'
-        }, {
-          src: require('../assets/topsale/b-topsale1.jpg'),
-          name: 'Áo thun ngắn tay',
-          price: '149.000 đ',
-          status: 'sale',
-          salePercent: '20%'
-        }, {
           src: require('../assets/topsale/g-topsale1.jpg'),
           name: 'Áo thun ngắn tay',
           price: '149.000 đ',
           status: ''
-        }, {
-          src: require('../assets/topsale/g-topsale2.jpg'),
-          name: 'Áo thun ngắn tay',
-          price: '149.000 đ',
-          status: 'new'
         }, {
           src: require('../assets/topsale/g-topsale3.jpg'),
           name: 'Áo thun ngắn tay',
@@ -267,7 +222,7 @@
 }
 
 .title {
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 
@@ -285,7 +240,7 @@
     display: none;
   }
   .title-text {
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
 }
 
@@ -375,7 +330,7 @@
 }
 
 .container-item > img {
-  height: 220px;
+  height: 180px;
   opacity: 0.8;
   transform: scale(0.8);
 }

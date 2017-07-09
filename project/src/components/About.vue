@@ -186,10 +186,17 @@
 
 .about-shop >a{
   text-transform: uppercase;
+  line-height: 45px;
 }
 @media (min-width: 1px) {
   .about-shop {
     display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-shop {
+    display: block;
   }
 }
 
