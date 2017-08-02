@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <h2>Show and hidden element</h2>
+    <p v-show="isNinja">Invisible like a ninja</p>
+    <p v-show="!isNinja">Im here</p>
+
+    <button v-on:click="isNinja = !isNinja">Toggle Ninja skill</button></br>
+    -------------------------------------------------------------</br>
+    <h2>hidding element unnit the vue instance is ready</h2>
+    <p>V-cloak element</p>
+    <p v-cloak>{{message}}</p></br>
+
+    ----------------------------------------------------------------</br>
+    <h2>looping through arrays</h2>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+  setTimeout(function () {
+    new Vue({
+      el: '#app',
+      data: {
+        isNinja: true,
+        message: '5s to run'
+      }
+
+    })
+  },5000)
+
+</script>
+</body>
+</html>

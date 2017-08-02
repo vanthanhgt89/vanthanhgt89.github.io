@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+    <style>
+        table,thead,tbody,th,tr,td{
+            border: 1px solid;
+            border-collapse:collapse;
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="searchQuery">
+    <p v-if="isSearching">Searching .....</p>
+    <div v-else>
+        <ul>
+            <li v-for="result in results">{{result}}</li>
+        </ul>
+    </div>
+
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      searchQuery: '',
+      results: [],
+      isSearching: false
+    },
+
+    watch: {
+      searchQuery: function(query){
+        console.log(query);
+      }
+    }
+
+
+
+  })
+
+</script>
+</body>
+</html>

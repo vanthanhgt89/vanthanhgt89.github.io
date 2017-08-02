@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+
+
+</head>
+<body>
+<div id="app">
+    <p>Title movie: {{movieTitle}}</p>
+    <p>Released:{{releasedMovie}}</p>
+    <p>The movie is [Old/New] {{isMovieOld()}}</p>
+
+    <!--return function with parameter-->
+    <p>The movie is [Old/New] {{isMovieOld1(releasedMovie)}}</p>
+
+    <!--return type boolean-->
+    <p>The movie is [Old/New] {{isMovieOld2(releasedMovie) ? 'New' : 'Old' }}</p>
+
+    <!--v-bind:attr-->
+    <div v-bind:title="movieTitle">How your mouse here</div>
+
+    <!--v-on:click=" " tao su kien trong vue js (v-on:'name event'='function method')-->
+    <button v-on:click="buttonClick">Click me</button>
+    <button v-on:click="buttonClick(event)">Click me</button> <!--sai cu phap-->
+    <button v-on:click="buttonClick($event)">Click me</button> <!--cu phap dung-->
+    <button v-on:click="buttonClick1('Hello world',$event)">Click me</button> <!--cu phap dung-->
+
+    <!--event.stopPropagation() tranh xay ra cac su kien trung lap tren Dom va div element-->
+    <div v-on:click="buttonClick">
+        <button v-on:click="buttonClick">Other events parent</button>
+    </div>
+    <!--sua loi them v-on.stop:click=''-->
+    <div v-on:click="buttonClick">
+        <button v-on:click.stop="buttonClick">Other events children</button>
+    </div>
+
+    <!--Tao su kien xay ra mot lan v-on:click.once-->
+    <div>
+        <button v-on:click.once="buttonClick">Other events only once</button>
+        <a href="https://google.com.vn" v-on:click="showDialog" target="_blank">Or here!</a>
+        <!--su dung event.preventDefault() neu khong muon chuyen toi trang lien ket-->
+        <a href="https://google.com.vn" v-on:click.prevent="showDialog" target="_blank">stop move Or here!</a>
+        <a href="https://google.com.vn" v-on:click.prevent target="_blank">stop move Or here!</a>
+
+    </div>
+
+    <!--key modifier name-->
+    <label for="">pressed Enter</label><br/>
+    <input type="text" v-on:keyup.enter="pressedEnter"><br/>
+    <label for="">Pressed enter and space</label><br/>
+    <input type="text" v-on:keyup.enter.space="pressedSomethingMoreInteresting"><br/>
+    <label for="">Vi tri thu 13 enter</label>
+    <input type="text" v-on:keyup.13="pressedEnter"><br/>
+    <label for="">pressed space</label><br/>
+    <input type="text" v-on:keyup.space="pressedSpace"><br/>
+    <label for="">pressed Shift and enter</label><br/>
+    <input type="text" v-on:keyup.shift.enter="myListener"><br/>
+    <label for="">Click and shift</label><br/>
+    <button v-on:click.shift="myListener">Click me</button><br/>
+    <button v-on:click.meta="myListener">Click me</button><br/>
+    <div class="container">
+        <div class="item" v-for="item in items">{{item}}</div>
+    </div>
+
+
+    <!--key modifier as ctrl shirf all and the window or command key on max-->
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      movieTitle: 'The Dragon',
+      releasedMovie: 1999
+
+    },
+    methods: {
+       isMovieOld: function () {
+         return this.releaseMovie > 2000 ? 'New' : 'Old';
+       },
+      isMovieOld1: function (releasedMovie) {
+        return releasedMovie > 2000 ? 'New' : 'Old';
+      },
+      isMovieOld2: function (releasedMovie) {
+        return releasedMovie > 2000 ;
+      },
+      buttonClick: function(event){
+         console.log(event);
+
+         alert('Tao su kien');
+      },
+      buttonClick1: function(message,event){
+        console.log(event);
+
+        alert(message);
+      },
+      showDialog: function () {
+        alert('go to google');
+      },
+      pressedEnter: function () {
+        alert('You pressed the enter key!');
+      },
+      pressedSomethingMoreInteresting: function () {
+        alert('You pressed the enter or space key!');
+      },
+      pressedSpace: function () {
+        alert('You pressed the space key!');
+      },
+      myListener: function(){
+        alert('You pressed the Shift and Enter');
+      },
+
+    }
+  })
+</script>
+</body>
+</html>

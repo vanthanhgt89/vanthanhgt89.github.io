@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+    <style>
+        table,thead,tbody,th,tr,td{
+            border: 1px solid;
+            border-collapse:collapse;
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+
+    <h2>looping through arrays</h2>
+    <h2>List item</h2>
+    <ul>
+        <li v-for="title in listItem">{{ title}}</li>
+    </ul>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Company</th>
+            <th>index</th>
+        </thead>
+        <tbody>
+            <tr v-for="(employee, index) in employees">
+                <td>{{index}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.title}}</td>
+                <td>{{companyName}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    ==================================================================
+    <h2> accessing the loop index </h2>
+    <ul>
+        <li v-for="(value,propertyName,index) in person">{{propertyName}}:{{value}} ({{index}})</li>
+
+    </ul>
+
+    <ul>
+        <li v-for="(n,index) in 10">{{n}} * {{index}} = {{n * index}}</li>
+    </ul>
+
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+        html: '<h1>hajfdh</h1>',
+        listItem: ['item1','item2','item3','item4'],
+        employees: [
+          {name: 'thanh', title: 'iquery'},
+          {name: 'minh', title: 'vue js'},
+          {name: 'quan', title: 'react js'},
+          {name: 'tuan', title: 'angolar js'}
+        ],
+        companyName: 'techmaster',
+        person:{
+          name: 'thanh',
+          adress: 'Nam dinh',
+          age: '27'
+        }
+
+      }
+
+    })
+
+</script>
+</body>
+</html>

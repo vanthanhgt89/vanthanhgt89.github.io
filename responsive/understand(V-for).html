@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+    <style>
+        table,thead,tbody,th,tr,td{
+            border: 1px solid;
+            border-collapse:collapse;
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="p in persons" v-bind:key="p.id">
+          <div style="color: red">{{p.name}}</div>
+          <div style="color: red">(ID: {{p.id}})</div>
+             <input type="text">
+        </li>
+    </ul>
+
+    <button v-on:click="addMorePerson()">Add more</button>
+    <button v-on:click="shuffle()">shuffle</button>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      persons: [
+        {id: 1, name: 'Thanh'},
+        {id: 2, name: 'bach'},
+        {id: 3, name: 'minh'}
+      ]
+
+    },
+    methods:{
+      addMorePerson: function () {
+        var hId = Math.max.apply(Math, this.person.map(function(p){
+          return p.id;
+        }))
+
+        var names = ['tuan','quan','vu','tit','hieu'];
+        this.persons.push({
+          id: hId + 1,
+          name: names[Math.floor(Math.random()*names.length)]
+        })
+      },
+      shuffle: function () {
+        this.persons = this.shuffleArray(this.persons.slice());
+      },
+      shuffleArray: function (array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+      }
+    }
+  })
+
+</script>
+</body>
+</html>

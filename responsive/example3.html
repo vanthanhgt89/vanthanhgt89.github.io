@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+
+
+</head>
+<body>
+<div id="app">
+    <!--su dung v-model lay data tu nguoi dung nhap trong input-->
+    <input type="text" v-model="name">
+    Output:{{name}}</br>
+    <!--parseInt-->
+    <input type="text" v-model.number="age"></br>
+    Output:{{name}}</br>
+    Output:{{ typeof age}}
+    <!--sau khi kick chuot ra ngoai input moi duoc updata-->
+    <input type="text" v-model.number.lazy="age"></br>
+    Output:{{age}}</br>
+    Output:{{ typeof age}}
+    </br>
+    ----------------------------------------
+    <span>private html usage v-html='data'</span>
+    <div v-html="html"></div>
+    ----------------------------------<label for="">Thay doi data html </label>
+    <h1>{{changeHtml}}</h1>
+    <button v-on:click="changeHtml = 'already change html'">Change</button></br>
+    <label for="">v-once chi dung mot lan</label>
+    <h1 v-once>{{changeHtml}}</h1></br>
+    <button v-on:click="changeHtml = 'already change html'">Change</button></br>
+    -------------------------------------------------- </br>
+    <p>Conditionally rendering elements</p>
+    <p v-if="itemsInStock > 10">{{itemsInStock}} in stock</p>
+    <p v-else-if="itemsInStock > 0">Hurry up, there are just a few items left</p>
+    <p v-else="">Too bad, we're all out</p>
+
+    -------------------------------------------------- </br>
+    <p>Using template neu khong muon xuat hien the div bao quanh p (inspect element to check)</p>
+    <template v-if="itemsInStock > 50">
+        <p>Special offter</p>
+    </template>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      name: '',
+      age: 20,
+      html: '<h1> This is private </h1>',
+      changeHtml: 'This change html',
+      itemsInStock: 51
+
+    }
+
+  })
+</script>
+</body>
+</html>

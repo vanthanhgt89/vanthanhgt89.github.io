@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1.0">
+
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <h1>{{age * 2}}</h1>
+        <!--Bieu thu dieu kien-->
+        <h1>{{age > 60 ? 'old' : 'young'}}</h1>
+        <h1>{{name.split(' ')[0]}}</h1>
+        <h1>{{ getFullName() }}</h1>
+        <h1>{{ getFullName1(firstName,lastName) }}</h1>
+        <!--return Object Name-->
+        <h1>{{ getFullName2(firstName,lastName) }}</h1>
+        <h1>{{ getFullName2(firstName,lastName).name }}</h1>
+         <!--Dung v-bind:href='blogUrl'-->
+        <h1><a v-bind:href="blogUrl">Google</a></h1>
+    </div>
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+    <script type="text/javascript">
+        new Vue({
+          el: '#app',
+          data: {
+            message: 'Hello world',
+            age: 27,
+            name: 'van thanh',
+            firstName: 'van',
+            lastName: 'thanh',
+            // cac tao link trong the a
+            blogUrl: 'https://google.com.vn'
+          },
+          methods: {
+            getFullName: function(){
+              return this.firstName + ' ' + this.lastName;
+            },
+            getFullName1: function(first,last){
+              return first + ' ' + last;
+            },
+            // return object
+            getFullName2: function (first,last) {
+              return {
+                name: first + ' ' + last
+              }
+            },
+//            error function
+//            getFullName: (first,last)=> { Return window not see vue object
+//              return this.firstName + ' ' + this.lastName;
+
+          }
+        })
+    </script>
+</body>
+</html>
